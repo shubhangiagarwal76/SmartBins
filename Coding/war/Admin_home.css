@@ -1,0 +1,51 @@
+
+/*!** Add css rules here for your application. *!*/
+
+.gwt-h1 {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    color: blue;
+}
+
+.body, .td, .a, .div, .p {
+    font-family: arial, sans-serif
+}
+
+/* Style the tab */
+.gwt-TabPanel {
+    overflow-y: visible;
+    overflow-x: visible;
+    border: 10px solid ;
+    background-color: aqua;
+}
+
+/* Style the buttons that are used to open the tab content */
+.gwt-TabLayoutPanelTabs {
+    background-color: black;
+    color: white;
+    float: left;
+    border: 10px solid;
+    outline: black;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.gwt-TabButton:hover {
+    background-color: red;
+}
+
+/* Create an active/current tablink class */
+.gwt-TabButton.active {
+    background-color: navy;
+}
+
+/* Style the tab content */
+.gwt-TabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid ;
+    border-top: none;
+}
