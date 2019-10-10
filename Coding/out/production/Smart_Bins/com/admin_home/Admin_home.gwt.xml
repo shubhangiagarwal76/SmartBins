@@ -4,6 +4,7 @@
 
     <!-- Inherit the core Web Toolkit stuff.                  -->
     <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.user.Debug"/>
 
     <!-- Specify the app entry point class.                   -->
     <entry-point class='com.admin_home.client.Admin_home'/>
@@ -11,5 +12,7 @@
 
     <!-- Specify the app servlets.                   -->
     <servlet path='/Admin_homeService' class='com.admin_home.server.Admin_homeServiceImpl'/>
-
+    <extend-configuration-property name="document.compatMode" value="BackCompat"/>
+    <servlet class="com.admin_home.server.Postgreconnection"
+             path="/Postgreconnection" />
 </module>

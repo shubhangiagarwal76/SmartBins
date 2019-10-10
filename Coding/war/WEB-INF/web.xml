@@ -4,4 +4,12 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <servlet>
+        <servlet-name>com.admin_home.Admin_home DBConnection</servlet-name>
+        <servlet-class>com.admin_home.server.Postgreconnection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>com.admin_home.Admin_home DBConnection</servlet-name>
+        <url-pattern>/Admin_home/Postgreconnection</url-pattern>
+    </servlet-mapping>
 </web-app>
