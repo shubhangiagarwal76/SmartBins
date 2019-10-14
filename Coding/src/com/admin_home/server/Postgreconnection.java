@@ -1,12 +1,11 @@
 package com.admin_home.server;
 
-import com.admin_home.client.Admin_homeService;
-import com.admin_home.client.DBConnection;
-import com.admin_home.client.Details;
-import com.admin_home.client.User;
+import com.admin_home.client.*;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-
+import com.google.gwt.user.client.*;
 import java.sql.*;
+import java.util.ArrayList;
+
 
 public class Postgreconnection extends RemoteServiceServlet implements DBConnection {
     private Connection con = null;
@@ -55,25 +54,52 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return user;
     }*/
-        public Details authenticateDetails()
+        public ArrayList<Details> authenticateDetails()
         {
-            Details det = null;
+            /*Admin_home a = new Admin_home();*/
+            ArrayList<Details> det = new ArrayList<Details>();
             try {
-                PreparedStatement driver = con.prepareStatement("select * from public.\"Driver\"");
+                PreparedStatement driver = con.prepareStatement("\n" +
+                        "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"='111111' AND \"Location\".\"L_Name\"='GHGF';");
                 ResultSet rs = driver.executeQuery();
+
                 System.out.println("Drivers Table is");
                 while (rs.next()) {
-                    det = new Details( rs.getLong(1) , rs.getString(3),  rs.getString(4) );
+                    det.add(new Details( rs.getLong(1) , rs.getString(2),  rs.getInt(3), rs.getString(4), rs.getString(5), rs.getString(6) ));
                 }
             } catch (SQLException f) {
                 f.printStackTrace();
             }
-            return
-                    det;
+            return det;
         }
-        
 
+        //MY COPY PASTED WORK WITH CONTACT PRANKUR
+
+    public ArrayList<Contact> authenticateContact()
+    {
+        /*Admin_home a = new Admin_home();*/
+        ArrayList<Contact> cont = new ArrayList<Contact>();
+        try {
+            PreparedStatement driver = con.prepareStatement("\n" +
+                    "SELECT  \"Driver\",\"F_Name\",\"Last_Name\",\"Driver\",\"Mobile_No\"\n" +
+                    "FROM \"Driver\", \"Staff\"\n" +
+                    "WHERE \"Driver\".\"Staff_ID\" = \"Staff\".\"Staff_ID\" AND\n" +
+                    "      \"Staff\".\"Staff_ID\" = 111111;\n");
+            ResultSet rs = driver.executeQuery();
+
+            System.out.println("Drivers Table is with");
+            while (rs.next()) {
+                cont.add(new Contact(rs.getString(2),  rs.getString(3), rs.getLong(1), rs.getLong(5), rs.getString(4) ));
+            }
+        } catch (SQLException f) {
+            f.printStackTrace();
+        }
+        return cont;
     }
+
+
+
+}
 
 
 
