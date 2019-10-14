@@ -1,0 +1,3 @@
+# SmartBins
+
+A PROJECT TO MAKE CITY CLEAN
