@@ -33,16 +33,18 @@ import com.admin_home.server.Postgreconnection;
 
 
 
-public class Admin_home implements EntryPoint {
+public class Admin_home implements EntryPoint{
     private DBConnectionAsync rpc;
-    Button search ;
+    Button search;
     private TextBox id;
     private TextBox pass;
-    private  TabPanel tp;
+    private TabPanel tp;
     CellTable<Admin> table;
-    VerticalPanel verticalPanel;
+    CellTable<AdminContact> tablecontact;
+    VerticalPanel verticalPanel, verticalPanel1;
     ListBox location;
-    DecoratorPanel decoratorPanel;
+    DecoratorPanel decoratorPanel, decoratorPanel1;
+    int count;
 
     private static class Admin {
         private String Dustbin_ID;
@@ -52,20 +54,63 @@ public class Admin_home implements EntryPoint {
         private String f_name;
         private String l_name;
         private String Notify;
-        public Admin(String Dustbin_ID, String location,String Status, String f_name, String l_name, String Notify)
-        {
+
+        public Admin(String Dustbin_ID, String location, String Status, String f_name, String l_name, String Notify) {
             this.Dustbin_ID = Dustbin_ID;
             this.location = location;
             this.f_name = f_name;
-            this.l_name=l_name;
-            this.Status= Status;
+            this.l_name = l_name;
+            this.Status = Status;
             this.Notify = Notify;
             System.out.println(Dustbin_ID);
 
         }
-        public String getDustbin_ID()
-        {
+
+        public String getDustbin_ID() {
             return Dustbin_ID;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public String getF_name() {
+            return f_name;
+        }
+
+        public String getL_name() {
+            return l_name;
+        }
+
+        public String getStatus() {
+            return Status;
+        }
+
+        public String getNotify() {
+            return Notify;
+        }
+    }
+    private static class AdminContact {
+        private String Driver_ID;
+        private String location;
+
+        private String f_name;
+        private String l_name;
+        private String ContactNo;
+        public AdminContact(String Driver_ID, String location, String f_name, String l_name, String ContactNo)
+        {
+            this.Driver_ID = Driver_ID;
+            this.location = location;
+            this.f_name = f_name;
+            this.l_name=l_name;
+            this.ContactNo=ContactNo;
+
+            System.out.println(Driver_ID);
+
+        }
+        public String getDriver_ID()
+        {
+            return Driver_ID;
         }
         public  String getLocation()
         {
@@ -79,27 +124,19 @@ public class Admin_home implements EntryPoint {
         {
             return l_name;
         }
-        public String getStatus()
+        public String getContactNo()
         {
-            return Status;
+            return ContactNo;
         }
 
-        public String getNotify()
-        {
-            return Notify;
-        }
     }
-
-
-
-
 
 
     public Admin_home() {
 
-
-
+        count  =0;
         verticalPanel = new VerticalPanel();
+        verticalPanel1 = new VerticalPanel();
         location = new ListBox();
         location.addItem("Girls hostel ground floor");
         search = new Button("Search");
@@ -108,6 +145,7 @@ public class Admin_home implements EntryPoint {
 
 
         decoratorPanel = new DecoratorPanel();
+        decoratorPanel1 = new DecoratorPanel();
         decoratorPanel.setWidth("1480");
         decoratorPanel.setHeight("500");
 
@@ -115,8 +153,7 @@ public class Admin_home implements EntryPoint {
         tp.add(decoratorPanel, "Home");
 
         tp.add(new Label("stats"), "Stats");
-        tp.add(new Label("Contact"), "Contact");
-
+        tp.add(decoratorPanel1, "Contact");
 
 
         // Show the 'Home' tab initially.
@@ -134,18 +171,17 @@ public class Admin_home implements EntryPoint {
         ServiceDefTarget target = (ServiceDefTarget) rpc;
         String moduleRelativeURL = GWT.getModuleBaseURL() + "Postgreconnection";
         target.setServiceEntryPoint(moduleRelativeURL);
-        AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
-        rpc.authenticateDetails(callback1);
-         table = new CellTable<>();
+
+        table = new CellTable<>();
 
         table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-        TextColumn<Admin> idColumn= new TextColumn<Admin>() {
+        TextColumn<Admin> idColumn = new TextColumn<Admin>() {
             @Override
             public String getValue(Admin object) {
                 return object.getDustbin_ID();
             }
         };
-        TextColumn<Admin> locationColumn= new TextColumn<Admin>() {
+        TextColumn<Admin> locationColumn = new TextColumn<Admin>() {
             @Override
             public String getValue(Admin object) {
                 return object.getLocation();
@@ -175,18 +211,67 @@ public class Admin_home implements EntryPoint {
                 return object.getNotify();
             }
         };
-        table.addColumn(idColumn, "Dustbin ID");
+        table.addColumn(idColumn, "DUSTBIN_ID");
         table.addColumn(locationColumn, "LOCATION");
-        table.addColumn(statusColumn, "Status");
+        table.addColumn(statusColumn, "STATUS");
         table.addColumn(fnameColumn, "FIRST NAME");
         table.addColumn(lnameColumn, "LAST NAME");
-        table.addColumn(notifyColumn, "Notify");
+        table.addColumn(notifyColumn, "NOTIFY");
+
+
+
+        AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
+        rpc.authenticateContact(callback);
+        tablecontact = new CellTable<>();
+
+        tablecontact.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
+        TextColumn<AdminContact> idColumncontact= new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact objectcontact){
+                return objectcontact.getDriver_ID();
+            }
+        };
+        TextColumn<AdminContact> locationconatct= new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object){
+                return object.getLocation();
+            }
+        };
+        TextColumn<AdminContact> fnamecolumncontact= new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object){
+                return object.getF_name();
+            }
+        };
+        TextColumn<AdminContact> lnameColumncontact= new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object){
+                return object.getL_name();
+            }
+        };
+        TextColumn<AdminContact> contactcolumncontact = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object) {
+                return object.getContactNo();
+            }
+        };
+
+
+        tablecontact.addColumn(idColumncontact, "DRIVER_ID");
+        tablecontact.addColumn(locationconatct, "LOCATION");
+        tablecontact.addColumn(fnamecolumncontact, "FIRST NAME");
+        tablecontact.addColumn(lnameColumncontact, "LAST NAME");
+        tablecontact.addColumn(contactcolumncontact, "CONTACT");
+
+
         verticalPanel.add(location);
         verticalPanel.add(search);
         verticalPanel.add(id);
         verticalPanel.add(pass);
         verticalPanel.add(table);
+        verticalPanel1.add(tablecontact);
         decoratorPanel.add(verticalPanel);
+        decoratorPanel1.add(verticalPanel1);
 
         /*RootPanel.get().add(table);*/
         search.addClickHandler(new ClickHandler() {
@@ -200,19 +285,23 @@ public class Admin_home implements EntryPoint {
 
                 if (sender.equals(search)) {
 
+                    AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
+                    rpc.authenticateDetails(callback1);
 
 
                 }
             }
         });
     }
-    private class AuthenticationHandler<T> implements AsyncCallback<ArrayList<Details>>{
+
+    private class AuthenticationHandler<T> implements AsyncCallback<ArrayList<Details>> {
 
         public void onFailure(Throwable ex) {
             HTML h = new HTML("RPC unsuccessful");
 
             RootPanel.get().add(h);
         }
+
         public void onSuccess(ArrayList<Details> result) {
             List<Admin> ADMIN = new ArrayList<Admin>();
             for (Details details : result) {
@@ -229,7 +318,8 @@ public class Admin_home implements EntryPoint {
             RootPanel.get().add(new HTML("RPC successful"));
         }
 
-        }
+    }
+
     private class AuthenticationHandlers<T> implements AsyncCallback<ArrayList<Contact>>{
 
         public void onFailure(Throwable ex) {
@@ -238,23 +328,24 @@ public class Admin_home implements EntryPoint {
             RootPanel.get().add(h);
         }
         public void onSuccess(ArrayList<Contact> result) {
-            List<Admin> ADMIN = new ArrayList<Admin>();
+            List<AdminContact> ADMINCONTACT = new ArrayList<AdminContact>();
             for (Contact contact : result) {
-                String dc = Long.toString(Contact.getDriver_ID());
-                String lc = Contact.getLocation();
-                String fc = Contact.getF_name();
-                String lnc = Contact.getL_name();
-                String dc1 = Long.toString(Contact.getConatctNo());
+                String dc = Long.toString(contact.getDriver_ID());
+                String lc = contact.getLocation();
+                String fc = contact.getF_name();
+                String lnc = contact.getL_name();
+                String dc1 = Long.toString(contact.getConatctNo());
                 //String s = Integer.toString(details.getStatus());
                 //String n = details.getNotify();
 
-                ADMIN.add(new Admin(dc, lc, fc, lnc,dc1));
+                ADMINCONTACT.add(new AdminContact(dc, lc, fc, lnc,dc1));
             }
-            table.setRowData(ADMIN);
+            tablecontact.setRowData(ADMINCONTACT);
             RootPanel.get().add(new HTML("RPC successful"));
         }
 
     }
+}
 
 
 
