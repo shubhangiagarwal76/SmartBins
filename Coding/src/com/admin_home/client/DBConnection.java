@@ -8,4 +8,5 @@ public interface DBConnection extends RemoteService{
    // public User authenticateUser(String name, String pass);
     public ArrayList<Details> authenticateDetails();
     public  ArrayList<Contact> authenticateContact();
+    public  ArrayList<Location> locationList();
 }

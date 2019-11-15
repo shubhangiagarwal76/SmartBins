@@ -13,6 +13,11 @@
           <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jar" />
           <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre6.jar" />
           <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre7.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jar_files/juli-6.0.53.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jar_files/coyote-6.0.53.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jar_files/catalina-6.0.53.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jar_files/servlet-api-6.0.53.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jar_files/annotations-api-6.0.53.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Smart_Bins/web/Web" />

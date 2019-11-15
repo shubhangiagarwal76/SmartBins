@@ -24,38 +24,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     }
 
     @Override
-    /*public User authenticateUser(String name, String pass) {
-        User user = null;
-        try {
-            PreparedStatement driver = con.prepareStatement("select * from public.\"Driver\"");
-            // PreparedStatement staff = con.prepareStatement("select * from public.\"Staff\"");
-            //PreparedStatement dustbin = con.prepareStatement("select * from public.\"Dustbin\"");
-            //PreparedStatement location = con.prepareStatement("select * from public.\"Location\"");
-            ResultSet rs = driver.executeQuery();
-            // ResultSet rs1 = staff.executeQuery();
-            // ResultSet d1 = dustbin.executeQuery();
-            // ResultSet l1 = location.executeQuery();
-            System.out.println("Drivers Table is");
-            while (rs.next()) {
-                user = new User(rs.getString(3), rs.getString(7));
-            }
-          *//*  System.out.println("Staff table is");
-            while ((rs1.next())) {
-                System.out.println(rs1.getLong(1) + " " + rs1.getString(2) + " " + rs1.getString(3) + " " + rs1.getLong(4) + " " + rs1.getLong(5) + " " + rs1.getString(6));
-            }
-            System.out.println("Dustbin Table is");
-            while ((d1.next())) {
-                System.out.println(d1.getLong(1) + " " + d1.getLong(2) + " " + d1.getInt(3));
-            }
-            System.out.println("Location table is");
-            while (l1.next()) {
-                System.out.println(l1.getLong(1) + " " + l1.getLong(2) + " " + l1.getLong(3) + " " + l1.getString(4));*//*
-            //}
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return user;
-    }*/
+
         public ArrayList<Details> authenticateDetails()
         {
             /*Admin_home a = new Admin_home();*/
@@ -97,6 +66,21 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
             f.printStackTrace();
         }
         return cont;
+    }
+    public ArrayList<Location> locationList()
+    {
+        ArrayList<Location> locations = new ArrayList<Location>();
+        try {
+            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=111111");
+            ResultSet rs = loc.executeQuery();
+            System.out.println("Location");
+            while (rs.next()) {
+                locations.add(new Location(rs.getString(1)));
+            }
+        } catch (SQLException f) {
+            f.printStackTrace();
+        }
+        return locations;
     }
 
 

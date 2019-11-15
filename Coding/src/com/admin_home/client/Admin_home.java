@@ -1,12 +1,14 @@
 package com.admin_home.client;
 
 import com.admin_home.server.Postgreconnection;
+import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.core.client.Callback;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.dom.client.ScriptElement;
 import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.Window;
@@ -130,37 +132,53 @@ public class Admin_home implements EntryPoint{
         }
 
     }
+    private static class LocationList{
+        private String location;
+        public LocationList(String location)
+        {
+            this.location = location;
+        }
+        public String getLocation()
+        {
+            return location;
+        }
+    }
 
 
     public Admin_home() {
 
-        count  =0;
         verticalPanel = new VerticalPanel();
         verticalPanel1 = new VerticalPanel();
-        location = new ListBox();
-        location.addItem("Girls hostel ground floor");
+
+
         search = new Button("Search");
         id = new TextBox();
         pass = new TextBox();
-
-
+        search.addStyleName("gwt-searchbutton");
+        Label Home=new Label("Home");
+        Home.addStyleName("labelhome_Stats_contact");
+        Label Stats=new Label("Stats");
+        Stats.addStyleName("labelhome_Stats_contact");
+        Label Contact=new Label("Contact");
+        Contact.addStyleName("labelhome_Stats_contact");
         decoratorPanel = new DecoratorPanel();
         decoratorPanel1 = new DecoratorPanel();
-        decoratorPanel.setWidth("1480");
-        decoratorPanel.setHeight("500");
-
+        decoratorPanel.setWidth("1200");
+        decoratorPanel.setHeight("200");
+        decoratorPanel1.setWidth("1200");
+        decoratorPanel1.setHeight("200");
         tp = new TabPanel();
-        tp.add(decoratorPanel, "Home");
+        tp.add(decoratorPanel,Home);
 
-        tp.add(new Label("stats"), "Stats");
-        tp.add(decoratorPanel1, "Contact");
+        tp.add(new Label("stats"),Stats);
+        tp.add(decoratorPanel1, Contact);
 
 
         // Show the 'Home' tab initially.
         tp.selectTab(0);
 
-        tp.setWidth("1500");
-        tp.setHeight("550");
+        tp.setWidth("1200");
+        tp.setHeight("100");
         /*Add it to the root panel.*/
 
     }
@@ -173,6 +191,7 @@ public class Admin_home implements EntryPoint{
         target.setServiceEntryPoint(moduleRelativeURL);
 
         table = new CellTable<>();
+        ButtonCell buttonCell = new ButtonCell();
 
         table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
         TextColumn<Admin> idColumn = new TextColumn<Admin>() {
@@ -205,10 +224,11 @@ public class Admin_home implements EntryPoint{
                 return object.getStatus();
             }
         };
-        TextColumn<Admin> notifyColumn = new TextColumn<Admin>() {
+        Column<Admin, String> notifyColumn = new Column<Admin, String>(buttonCell) {
             @Override
             public String getValue(Admin object) {
-                return object.getNotify();
+
+                return "Notify";
             }
         };
         table.addColumn(idColumn, "DUSTBIN_ID");
@@ -217,7 +237,7 @@ public class Admin_home implements EntryPoint{
         table.addColumn(fnameColumn, "FIRST NAME");
         table.addColumn(lnameColumn, "LAST NAME");
         table.addColumn(notifyColumn, "NOTIFY");
-
+        verticalPanel.add(table);
 
 
         AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
@@ -264,11 +284,16 @@ public class Admin_home implements EntryPoint{
         tablecontact.addColumn(contactcolumncontact, "CONTACT");
 
 
+        AsyncCallback<ArrayList<Location>> callback2 = new locationList<ArrayList<Location>>();
+        rpc.locationList(callback2);
+        location = new ListBox();
+
+
         verticalPanel.add(location);
         verticalPanel.add(search);
-        verticalPanel.add(id);
-        verticalPanel.add(pass);
-        verticalPanel.add(table);
+        //verticalPanel.add(id);
+        //verticalPanel.add(pass);
+
         verticalPanel1.add(tablecontact);
         decoratorPanel.add(verticalPanel);
         decoratorPanel1.add(verticalPanel1);
@@ -344,6 +369,26 @@ public class Admin_home implements EntryPoint{
             RootPanel.get().add(new HTML("RPC successful"));
         }
 
+    }
+    private class locationList<T> implements AsyncCallback<ArrayList<Location>>{
+
+
+        @Override
+        public void onFailure(Throwable caught) {
+
+        }
+
+        @Override
+        public void onSuccess(ArrayList<Location> result) {
+
+            for (Location locationList: result)
+            {
+                String l = locationList.getLocation();
+
+                location.addItem(l);
+            }
+
+        }
     }
 }
 

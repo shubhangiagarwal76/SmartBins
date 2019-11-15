@@ -1,0 +1,18 @@
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.8.0//EN"
+        "http://gwtproject.org/doctype/2.8.0/gwt-module.dtd">
+<module rename-to="Admin_home">
+
+    <!-- Inherit the core Web Toolkit stuff.                  -->
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.user.Debug"/>
+
+    <!-- Specify the app entry point class.                   -->
+    <entry-point class='com.admin_home.client.Admin_home'/>
+
+
+    <!-- Specify the app servlets.                   -->
+    <servlet path='/Admin_homeService' class='com.admin_home.server.Admin_homeServiceImpl'/>
+    <extend-configuration-property name="document.compatMode" value="BackCompat"/>
+    <servlet class="com.admin_home.server.Postgreconnection"
+             path="/Postgreconnection" />
+</module>

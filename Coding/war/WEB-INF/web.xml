@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Admin_home.css"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
@@ -8,8 +9,16 @@
         <servlet-name>com.admin_home.Admin_home DBConnection</servlet-name>
         <servlet-class>com.admin_home.server.Postgreconnection</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>com.admin_home.Admin_home Admin_homeService</servlet-name>
+        <servlet-class>com.admin_home.server.Admin_homeServiceImpl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>com.admin_home.Admin_home DBConnection</servlet-name>
         <url-pattern>/Admin_home/Postgreconnection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>com.admin_home.Admin_home Admin_homeService</servlet-name>
+        <url-pattern>/Admin_home/Admin_homeService</url-pattern>
     </servlet-mapping>
 </web-app>
