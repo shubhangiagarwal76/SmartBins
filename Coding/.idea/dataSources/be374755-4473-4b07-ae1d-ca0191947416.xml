@@ -1,74 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="SmartBins@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>10.9</ServerVersion>
+      <StartupTime>1573769899</StartupTime>
     </root>
     <database id="2" parent="1" name="SmartBins">
       <ObjectId>16730</ObjectId>
-      <StateNumber>1032</StateNumber>
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>1111</IntrospectionStateNumber>
       <Current>1</Current>
-      <Visible>1</Visible>
-      <Relations>sequence|table|16731|16735|1
-sequence|table|16747|16749|2
-sequence|table|16745|16749|1
-sequence|table|16768|16770|4
-sequence|table|16764|16770|1
-sequence|table|16766|16770|2
+      <Relations>sequence|table|16764|16770|1
 sequence|table|16786|16788|1
+sequence|table|16768|16770|4
+sequence|table|16747|16749|2
+sequence|table|16766|16770|2
+sequence|table|16731|16735|1
+sequence|table|16745|16749|1
 </Relations>
     </database>
     <database id="3" parent="1" name="dvdrental">
       <ObjectId>16402</ObjectId>
-      <StateNumber>559</StateNumber>
       <Owner>postgres</Owner>
     </database>
     <database id="4" parent="1" name="postgres">
       <ObjectId>12938</ObjectId>
       <Comment>default administrative connection database</Comment>
-      <StateNumber>554</StateNumber>
       <Owner>postgres</Owner>
     </database>
     <database id="5" parent="1" name="test">
       <ObjectId>16393</ObjectId>
-      <StateNumber>557</StateNumber>
       <Owner>postgres</Owner>
     </database>
     <role id="6" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="7" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="8" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="9" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="10" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="11" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
@@ -106,7 +90,6 @@ sequence|table|16786|16788|1
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>1112</IntrospectionStateNumber>
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <access-method id="18" parent="2" name="btree">
       <ObjectId>403</ObjectId>
@@ -239,6 +222,7 @@ Male</Labels>
     </object-type>
     <table id="34" parent="17" name="Driver">
       <ObjectId>16735</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1007</StateNumber>
     </table>

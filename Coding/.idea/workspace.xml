@@ -243,11 +243,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="524" />
-  </component>
+  <component name="ProjectId" id="1TeEBkDknqS970qj7Rgtt4ZVoMO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -1053,7 +1049,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/CellTable.java">
+    <entry file="jar://$PROJECT_DIR$/../../gwt-2.8.2/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/CellTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="150" column="10" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
@@ -1158,7 +1154,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/client/rpc/core/java/util/Collection_CustomFieldSerializerBase.java">
+    <entry file="jar://$PROJECT_DIR$/../../gwt-2.8.2/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/client/rpc/core/java/util/Collection_CustomFieldSerializerBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
