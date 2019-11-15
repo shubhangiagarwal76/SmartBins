@@ -46,9 +46,9 @@
         zoom:18
     });
     map.on('load', function() {
-        map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function(error, image) {
+        map.loadImage('trash_can-512.png', function(error, image) {
             if (error) throw error;
-            map.addImage('cat', image);
+            map.addImage('dustbin', image);
             map.addLayer({
                 "id": "points",
                 "type": "symbol",
@@ -66,7 +66,7 @@
                     }
                 },
                 "layout": {
-                    "icon-image": "cat",
+                    "icon-image": "dustbin",
                     "icon-size": 0.25
                 }
             });
