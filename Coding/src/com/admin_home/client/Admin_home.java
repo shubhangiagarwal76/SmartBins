@@ -78,7 +78,7 @@ public class Admin_home implements EntryPoint{
         vpanel.add(hpanel);
         hpanel.setSpacing(10);
         vpanel.setStyleName("Vertical");
-        forget.setHref("LOGIN.html");
+        forget.setHref("LOGIN.jsp");
         forget.setText("Forget Password?");
         forget.setSize("2","2");
         vpanel.setBorderWidth(3);
