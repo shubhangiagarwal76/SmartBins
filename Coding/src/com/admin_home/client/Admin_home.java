@@ -37,13 +37,13 @@ import com.admin_home.server.Postgreconnection;
 
 public class Admin_home implements EntryPoint{
     private DBConnectionAsync rpc;
-    Button search;
+    Button search, s1;
     private TextBox id;
     private TextBox pass;
     private TabPanel tp;
     CellTable<Admin> table;
     CellTable<AdminContact> tablecontact;
-    VerticalPanel verticalPanel, verticalPanel1;
+    VerticalPanel verticalPanel, verticalPanel1, vp2;
     ListBox location;
     DecoratorPanel decoratorPanel, decoratorPanel1;
     int count;
@@ -149,9 +149,11 @@ public class Admin_home implements EntryPoint{
 
         verticalPanel = new VerticalPanel();
         verticalPanel1 = new VerticalPanel();
+        vp2 = new VerticalPanel();
 
 
         search = new Button("Search");
+        s1 = new Button("gdhd");
         id = new TextBox();
         pass = new TextBox();
         search.addStyleName("gwt-searchbutton");
@@ -179,12 +181,15 @@ public class Admin_home implements EntryPoint{
 
         tp.setWidth("1200");
         tp.setHeight("100");
+
+        vp2.add(tp);
+        vp2.add(s1);
         /*Add it to the root panel.*/
 
     }
 
     public void onModuleLoad() {
-        RootPanel.get().add(tp);
+        RootPanel.get().add(vp2);
         rpc = (DBConnectionAsync) GWT.create(DBConnection.class);
         ServiceDefTarget target = (ServiceDefTarget) rpc;
         String moduleRelativeURL = GWT.getModuleBaseURL() + "Postgreconnection";

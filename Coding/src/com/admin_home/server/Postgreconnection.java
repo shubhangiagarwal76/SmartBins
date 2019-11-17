@@ -71,7 +71,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     {
         ArrayList<Location> locations = new ArrayList<Location>();
         try {
-            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=111111");
+            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=111112");
             ResultSet rs = loc.executeQuery();
             System.out.println("Location");
             while (rs.next()) {
