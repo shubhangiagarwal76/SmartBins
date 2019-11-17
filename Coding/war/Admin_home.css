@@ -1,6 +1,6 @@
 .body, .td, .a, .div, .p {
-    font-family: arial, sans-serif
-
+    font-family: arial;
+    background-color: royalblue;
 
 }
 .td{
@@ -95,4 +95,33 @@
     padding: 6px 12px;
     border: 1px solid ;
     border-top: none;
+}
+.gwt-Button {
+    align-items:center;
+    color:brown;
+    margin: 0;
+    padding: 5px 7px;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+    font-size:small;
+    background:url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjShIDEiO3lAhVJyDgGHVf1B4IQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.flaticon.com%252Ffree-icon%252Flogin-button_16036%26psig%3DAOvVaw3VMXObzc2NQ36Ce1hK2QXF%26ust%3D1573936504671488&psig=AOvVaw3VMXObzc2NQ36Ce1hK2QXF&ust=1573936504671488") repeat-x 0px -2077px;
+    border:1px solid #bbb;
+    border-bottom: 1px solid #a0a0a0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.gwt-Button:active {
+    border: 1px inset #ccc;
+}
+
+.gwt-Button:hover {
+    border-color: #939393;
+}
+
+.Vertical {
+    border-color: royalblue;
+    background-color: tan;
+
 }

@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="Smart_Bins:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="" />
+    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be374755-4473-4b07-ae1d-ca0191947416.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be374755-4473-4b07-ae1d-ca0191947416/storage_v2/_src_/database/SmartBins.lUFXIQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be374755-4473-4b07-ae1d-ca0191947416/storage_v2/_src_/database/SmartBins.lUFXIQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/META-INF/Smart_Bins.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/META-INF/Smart_Bins.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/Admin_home.gwt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/Admin_home.gwt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$AdminContact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$AuthenticationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$AuthenticationHandlers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$LocationList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/Admin_home.gwt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/Admin_home.gwt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/Admin_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/Admin_home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/Admin_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/Admin_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/trash_can-512.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +109,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="CSS File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -109,14 +146,18 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1TeEBkDknqS970qj7Rgtt4ZVoMO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../postgresql-42.2.8.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/login/client" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -133,9 +174,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.admin_home.client" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tiwar\Downloads\SmartBins-master\Coding\src\com\login\client" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Desktop\SmartBins\Coding\.idea\artifacts" />
     </key>
@@ -684,7 +731,8 @@
       <workItem from="1571169169001" duration="27634000" />
       <workItem from="1572013611367" duration="13115000" />
       <workItem from="1573812036922" duration="2605000" />
-      <workItem from="1573821602711" duration="1965000" />
+      <workItem from="1573821602711" duration="2284000" />
+      <workItem from="1573840898459" duration="29865000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -755,16 +803,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="contact table updated" />
     <option name="LAST_COMMIT_MESSAGE" value="contact table updated" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java</url>
-          <line>347</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
