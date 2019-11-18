@@ -189,6 +189,9 @@ public class Admin_home implements EntryPoint{
     }
 
     public void onModuleLoad() {
+        Anchor a = new Anchor("LOGIN");
+        a.setHref("Login.html");
+        RootPanel.get().add(a);
         RootPanel.get().add(vp2);
         rpc = (DBConnectionAsync) GWT.create(DBConnection.class);
         ServiceDefTarget target = (ServiceDefTarget) rpc;
