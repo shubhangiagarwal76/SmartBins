@@ -10,33 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="LOGIN Problem">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AdminContact.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/LOGIN.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/LOGIN.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/resources/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/resources/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/resources/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/resources/trash_can-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user__2_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gwt_user__2_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +132,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/login/client" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -166,7 +146,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />

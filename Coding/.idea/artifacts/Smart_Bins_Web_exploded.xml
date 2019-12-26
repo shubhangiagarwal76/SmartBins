@@ -19,6 +19,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/catalina-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/servlet-api-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/annotations-api-6.0.53.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2/gwt-servlet.jar" />
         </element>
       </element>
       <element id="gwt-compiler-output" facet="Smart_Bins/gwt/GWT" />

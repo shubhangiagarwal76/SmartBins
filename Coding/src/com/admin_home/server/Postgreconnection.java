@@ -5,7 +5,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.google.gwt.user.client.*;
 import java.sql.*;
 import java.util.ArrayList;
-import static org.postgresql.core.SqlCommandType.SELECT;
+//import static org.postgresql.core.SqlCommandType.SELECT;
 public class Postgreconnection extends RemoteServiceServlet implements DBConnection {
     private Connection con = null;
 
