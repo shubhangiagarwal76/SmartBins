@@ -3,6 +3,8 @@ package com.admin_home.server;
 import com.admin_home.client.*;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.google.gwt.user.client.*;
+import org.postgresql.util.PSQLException;
+
 import java.sql.*;
 import java.util.ArrayList;
 import static org.postgresql.core.SqlCommandType.SELECT;
@@ -21,19 +23,21 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     }
 
     @Override
-
-        public ArrayList<Details> authenticateDetails()
+        //Home list
+        public ArrayList<Details> authenticateDetails(long sid,String lname)
         {
             /*Admin_home a = new Admin_home();*/
             ArrayList<Details> det = new ArrayList<Details>();
             try {
                 PreparedStatement driver = con.prepareStatement("\n" +
-                        "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"='111111' AND \"Location\".\"L_Name\"='GHGF';");
+                        "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\",\"Mobile_No\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"=? AND \"Location\".\"L_Name\"=?;");
+                driver.setLong(1,sid);
+                driver.setString(2,lname);
                 ResultSet rs = driver.executeQuery();
 
                 System.out.println("Drivers Table is");
                 while (rs.next()) {
-                    det.add(new Details( rs.getLong(1) , rs.getString(2),  rs.getInt(3), rs.getString(4), rs.getString(5), rs.getString(6) ));
+                    det.add(new Details( rs.getLong(1) , rs.getString(2),  rs.getInt(3), rs.getString(4), rs.getString(5),rs.getLong(6) , rs.getString(7) ));
                 }
             } catch (SQLException f) {
                 f.printStackTrace();
@@ -43,7 +47,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
 
         //MY COPY PASTED WORK WITH CONTACT PRANKUR
 
-    public ArrayList<Contact> authenticateContact()
+    public ArrayList<Contact> authenticateContact(long sid)
     {
         /*Admin_home a = new Admin_home();*/
         ArrayList<Contact> cont = new ArrayList<Contact>();
@@ -52,7 +56,8 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
                     "FROM \"Driver\", \"Staff\",\"Location\"\n" +
                     "WHERE \"Driver\".\"Staff_ID\" = \"Staff\".\"Staff_ID\" AND \"Location\".\"Staff_ID\"=\"Staff\".\"Staff_ID\" AND\n" +
                     "      \"Driver\".\"Driver_ID\"=\"Location\".\"Driver_ID\" AND\n" +
-                    "        \"Location\".\"Staff_ID\" = 111111;");
+                    "        \"Location\".\"Staff_ID\" = ?;");
+            driver.setLong(1,sid);
             ResultSet rs = driver.executeQuery();
 
             System.out.println("Drivers Table is with");
@@ -64,11 +69,12 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return cont;
     }
-    public ArrayList<Location> locationList()
+    public ArrayList<Location> locationList(long sid)
     {
         ArrayList<Location> locations = new ArrayList<Location>();
         try {
-            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=111111");
+            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=?");
+            loc.setLong(1,sid);
             ResultSet rs = loc.executeQuery();
             System.out.println("Location");
             while (rs.next()) {
@@ -79,10 +85,38 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return locations;
     }
+    //SERVER SIDE AUTHENTICATION LOGIN
+    public User authenticateUser(long name, String pass, int n)
+    {
+        User user= null;
+        try {
+            PreparedStatement passrs = con.prepareStatement("Select \"Staff\".\"Password\" from \"Staff\" where \"Staff_ID\"=?");
+            passrs.setLong(1, name);
+            ResultSet rs = passrs.executeQuery();
+            System.out.println("User id passed "+name+"password passed "+pass);
+            //System.out.println("number of rows "+rs.getRow());
+            if(rs.next()) {
+                //rs.next();
+                if (rs.getString(1).equals(pass)) {
+                    user = new User(name, pass, 1);
+                    System.out.println("password "+rs.getString(1));
+                } else {
+                    user = new User(name, pass, 0);
+                    System.out.println("password wrong " + rs.getString(1));
+                }
+            } else  {
+                user = new User(name, pass, -1);
+                System.out.println("password null ");
+            }
+        }
+        catch(PSQLException pe){System.out.println(pe);}
+        catch (SQLException e){ System.out.println(e);}
+
+        return user;
+        }
+    }
 
 
-
-}
 
 
 

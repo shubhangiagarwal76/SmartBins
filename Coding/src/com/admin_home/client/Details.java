@@ -10,17 +10,19 @@ public class Details implements IsSerializable {
     private String f_name;
     private String l_name;
     private String Notify;
+    private long Mobile_no;
    public Details()
     {
 
     }
-    public Details(long Dustbin_ID, String location,int Status, String f_name, String l_name, String Notify)
+    public Details(long Dustbin_ID, String location,int Status, String f_name, String l_name, long Mobile_no, String Notify)
     {
         this.Dustbin_ID = Dustbin_ID;
         this.location = location;
         this.f_name = f_name;
         this.l_name=l_name;
         this.Status= Status;
+        this.Mobile_no=Mobile_no;
         this.Notify = Notify;
         System.out.println(Dustbin_ID);
 
@@ -45,6 +47,7 @@ public class Details implements IsSerializable {
     {
         return Status;
     }
+    public long getMobile_no(){ return Mobile_no;}
 
     public String getNotify()
     {

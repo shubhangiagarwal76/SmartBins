@@ -29,17 +29,16 @@
 
 
 <% String Pass = null;
-    long var= 0;
-    PrintWriter Out = response.getWriter();
+long var= 0;
     try{
+    PrintWriter Out = response.getWriter();
+
+    var  = Long.parseLong(request.getParameter("number"));
 
 
-        var  = Long.parseLong(request.getParameter("number"));
+    Out.println(var);
 
-
-        Out.println(var);
-
-        Connection con = null;
+    Connection con = null;
         Class.forName("org.postgresql.Driver");
         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
         PreparedStatement n = con.prepareStatement("SELECT \"Staff\".\"Password\" FROM \"Staff\" WHERE \"Mobile_No\"=?");
@@ -47,7 +46,7 @@
         ResultSet rs = n.executeQuery();
         while (rs.next())
         {
-            Pass = rs.getString("Password");
+             Pass = rs.getString("Password");
 
 
         }
@@ -89,8 +88,8 @@
         myURLConnection.connect();
         reader= new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
         String success="Your password sent successfully on "+var;
-        Out.println(success+"\n");
-        Out.println("NOTE: PLEASE MAKE SURE YOUR NUMBER IS NOT ON DND, OTHERWISE MESSAGE WILL NOT BE RECEIVED");
+        out.println(success);
+        out.println("NOTE: PLEASE MAKE SURE YOUR NUMBER IS NOT ON DND, OTHERWISE MESSAGE WILL NOT BE RECEIVED");
 
 //finally close connection
         reader.close();

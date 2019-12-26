@@ -3,21 +3,23 @@ package com.admin_home.client;
 import com.google.gwt.user.client.rpc.IsSerializable;
 
 public class User implements IsSerializable {
-    private String username;
+    private long username;
     private String password;
+    private  int n;
 
     @SuppressWarnings("unused")
-    private User() {
+    public User() {
         //just here because GWT wants it.
     }
 
 
-    public User(String username, String password) {
+    public User(long username, String password, int n) {
         this.username = username;
         this.password = password;
+        this.n = n;
         //System.out.println(username+" "+password);
     }
-    public String getUsername()
+    public long getUsername()
     {
         return username;
     }
@@ -25,5 +27,6 @@ public class User implements IsSerializable {
     {
         return password;
     }
+    public  int getValue(){return n; }
 
 }
