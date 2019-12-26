@@ -5,8 +5,8 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import java.util.ArrayList;
 
 public interface DBConnectionAsync {
-   // public void authenticateUser(String name, String pass, AsyncCallback<User>callback);
-    public void authenticateDetails(AsyncCallback<ArrayList<Details>> callback1);
-    public void authenticateContact(AsyncCallback<ArrayList<Contact>> callback);
-    public void locationList(AsyncCallback<ArrayList<Location>> callback2);
+    public void authenticateUser(long name, String pass,int n, AsyncCallback<User> callback3);
+    public void authenticateDetails(long sid, String lname, AsyncCallback<ArrayList<Details>> callback1);
+    public void authenticateContact(long sid, AsyncCallback<ArrayList<Contact>> callback);
+    public void locationList(long sid, AsyncCallback<ArrayList<Location>> callback2);
 }

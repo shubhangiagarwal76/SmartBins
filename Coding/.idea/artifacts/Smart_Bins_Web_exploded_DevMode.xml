@@ -19,6 +19,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/catalina-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/servlet-api-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/annotations-api-6.0.53.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../postgresql-42.2.8.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Smart_Bins/web/Web" />
