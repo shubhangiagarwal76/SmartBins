@@ -30,8 +30,8 @@
 
 <% String Pass = null;
 long var= 0;
-    try{
     PrintWriter Out = response.getWriter();
+    try{
 
     var  = Long.parseLong(request.getParameter("number"));
 
@@ -40,7 +40,7 @@ long var= 0;
 
     Connection con = null;
         Class.forName("org.postgresql.Driver");
-        con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
+       con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
         PreparedStatement n = con.prepareStatement("SELECT \"Staff\".\"Password\" FROM \"Staff\" WHERE \"Mobile_No\"=?");
         n.setLong(1, var);
         ResultSet rs = n.executeQuery();
@@ -64,7 +64,7 @@ long var= 0;
             .build();
 
     Response response = client.newCall(request).execute();*/
-    String authkey = "18sUVSjxhSo-cPH0wdHNHsF3Li6ctemNOmPrCktsNX";
+    String authkey = "18sUVSjxhSo-ok70P2kfLE9FIkGSax0ISKq1KBR2zr";
     String senderId = "TXTLCL";
     String route="4";
     URLConnection myURLConnection=null;
@@ -88,8 +88,8 @@ long var= 0;
         myURLConnection.connect();
         reader= new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
         String success="Your password sent successfully on "+var;
-        out.println(success);
-        out.println("NOTE: PLEASE MAKE SURE YOUR NUMBER IS NOT ON DND, OTHERWISE MESSAGE WILL NOT BE RECEIVED");
+        Out.println(success);
+        Out.println("NOTE: PLEASE MAKE SURE YOUR NUMBER IS NOT ON DND, OTHERWISE MESSAGE WILL NOT BE RECEIVED");
 
 //finally close connection
         reader.close();

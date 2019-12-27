@@ -2,15 +2,21 @@ package com.admin_home.server;
 
 import com.admin_home.client.*;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.google.gwt.user.client.*;
 import org.postgresql.util.PSQLException;
 
+import java.io.*;
+import java.net.*;
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
-import static org.postgresql.core.SqlCommandType.SELECT;
+
 public class Postgreconnection extends RemoteServiceServlet implements DBConnection {
     private Connection con = null;
-
+    //CONSTRUCTOR
     public Postgreconnection() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -46,7 +52,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
 
         //MY COPY PASTED WORK WITH CONTACT PRANKUR
-
+    //CONTACT LIST
     public ArrayList<Contact> authenticateContact(long sid)
     {
         /*Admin_home a = new Admin_home();*/
@@ -69,6 +75,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return cont;
     }
+    //LOCATION DROPDOWN
     public ArrayList<Location> locationList(long sid)
     {
         ArrayList<Location> locations = new ArrayList<Location>();
@@ -114,7 +121,45 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
 
         return user;
         }
+   // SENDING SMS
+    public String sendSms(String phoneno) {
+        try {
+            // Construct data
+            String authkey = "18sUVSjxhSo-ok70P2kfLE9FIkGSax0ISKq1KBR2zr";
+            String senderId = "TXTLCL";
+            String route = "4";
+            URLConnection myURLConnection = null;
+            URL myURL = null;
+            BufferedReader reader = null;
+            //String encoded_message=URLEncoder.encode(Pass);
+            String mainUrl = "https://api.textlocal.in/send/?";
+            StringBuilder sbPostData = new StringBuilder(mainUrl);
+            sbPostData.append("apikey=" + authkey);
+            sbPostData.append("&numbers=" + phoneno);
+            sbPostData.append("&message=" + "EMPTY YOUR DUSTBIN");
+            sbPostData.append("&route=" + route);
+            sbPostData.append("&sender=" + senderId);
+
+            mainUrl = sbPostData.toString();
+            try {
+//prepare connection
+                myURL = new URL(mainUrl);
+                myURLConnection = myURL.openConnection();
+                myURLConnection.connect();
+                reader = new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
+                System.out.println("MESSAGE SENT SUCCESSFULLY "+ phoneno);
+//finally close connection
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "SUCCESS";
     }
+}
+
 
 
 

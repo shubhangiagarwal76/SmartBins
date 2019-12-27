@@ -184,10 +184,10 @@ public class admin_dashboard implements ClickHandler{
     public static String getPhone(){ return phone;}
 
     public void addingpaneldashboard(){
-        search.addStyleName("gwt-searchbutton");
+        //search.addStyleName("gwt-searchbutton");
         search.addClickHandler(this);
-        Home.addStyleName("labelhome_Stats_contact");
-        Contact.addStyleName("labelhome_Stats_contact");
+        //Home.addStyleName("labelhome_Stats_contact");
+        //Contact.addStyleName("labelhome_Stats_contact");
         decoratorPanel.setWidth("1200");
         decoratorPanel.setHeight("200");
         decoratorPanel1.setWidth("1200");
@@ -197,7 +197,7 @@ public class admin_dashboard implements ClickHandler{
         verticalPanel.add(hpanel);
         decoratorPanel.add(verticalPanel);
         decoratorPanel1.add(verticalPanel1);
-        maps.setHref("LOGIN.html");
+        maps.setHref("MAPS.html");
         tp.add(decoratorPanel,Home);
         tp.add(decoratorPanel1, Contact);
         verticalPanel.add(maps);
@@ -278,8 +278,10 @@ public class admin_dashboard implements ClickHandler{
                 @Override
                 public void update(int index, Admin object, String value) {
                     phone=object.getMobileno();
+                    AsyncCallback <String> callback4 = new sendsms<String>();
+                    rpc.sendSms(phone, callback4);
                     Window.alert("MESSAGE SUCCESSFULLY SEND TO: "+ object.getMobileno());
-            }};
+                }};
             notifyColumn.setFieldUpdater(f);
 
 
@@ -420,7 +422,7 @@ public class admin_dashboard implements ClickHandler{
         }
 
     }
-    private class locationList<T> implements AsyncCallback<ArrayList<Location>>{
+    private class locationList<T> implements AsyncCallback<ArrayList<Location>> {
 
 
         @Override
@@ -440,4 +442,21 @@ public class admin_dashboard implements ClickHandler{
 
         }
     }
+    private class sendsms<T> implements AsyncCallback<String>{
+
+
+        @Override
+        public void onFailure(Throwable caught) {
+
+        }
+
+        @Override
+        public void onSuccess(String result) {
+
+            result=getPhone();
+            System.out.println(result);
+
+        }
+    }
+
 }

@@ -9,4 +9,5 @@ public interface DBConnection extends RemoteService{
     public ArrayList<Details> authenticateDetails(long sid, String lname);
     public  ArrayList<Contact> authenticateContact(long sid);
     public  ArrayList<Location> locationList(long sid);
+    public String sendSms(String phoneno);
 }
