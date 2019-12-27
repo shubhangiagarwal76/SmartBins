@@ -7,6 +7,10 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.dom.client.ScriptElement;
+import com.google.gwt.dom.client.Style;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
@@ -24,18 +28,21 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import com.admin_home.server.Postgreconnection;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.datepicker.client.DateBox;
+import com.google.gwt.user.datepicker.client.DatePicker;
+
 //import sun.font.Decoration;
 //import com.admin_home.server.demo;
 /**
  * Entry point classes define <code>onModuleLoad()</code>
  */
-
-
-
-
 
 public class admin_dashboard implements ClickHandler{
     private DBConnectionAsync rpc;
@@ -55,7 +62,8 @@ public class admin_dashboard implements ClickHandler{
     HorizontalPanel hpanel;
     Anchor maps;
     private static String phone;
-    com.google.gwt.user.client.Timer refresh;
+    Timer refresh;
+    Button adddriver;
 
 
     //INNER ADMIN CLASS FOR HOME LIST
@@ -151,21 +159,9 @@ public class admin_dashboard implements ClickHandler{
     }
 
 
-    /*private static class LocationList{
-        private String location;
-        public LocationList(String location)
-        {
-            this.location = location;
-        }
-        public String getLocation()
-        {
-            return location;
-        }
-    }*/
-
-
     public admin_dashboard() {
 
+        adddriver=new Button("ADD DRIVER");
         verticalPanel = new VerticalPanel();
         verticalPanel1 = new VerticalPanel();
         search = new Button("Search");
@@ -190,6 +186,7 @@ public class admin_dashboard implements ClickHandler{
     public void addingpaneldashboard(){
         //search.addStyleName("gwt-searchbutton");
         search.addClickHandler(this);
+        adddriver.addClickHandler(this);
         //Home.addStyleName("labelhome_Stats_contact");
         //Contact.addStyleName("labelhome_Stats_contact");
         decoratorPanel.setWidth("1200");
@@ -205,19 +202,21 @@ public class admin_dashboard implements ClickHandler{
         tp.add(decoratorPanel,Home);
         tp.add(decoratorPanel1, Contact);
         verticalPanel.add(maps);
+        verticalPanel.add(adddriver);
         tp.selectTab(0);
         tp.setWidth("1200");
         tp.setHeight("100");
 
     }
-    public void onModuleLoad()
-    {
+
+    public void onModuleLoad() {
         addingpaneldashboard();
         connectionEstd();
 
 
         RootPanel.get().add(tp);
     }
+
     public void connectionEstd() {
         rpc = (DBConnectionAsync) GWT.create(DBConnection.class);
         ServiceDefTarget target = (ServiceDefTarget) rpc;
@@ -231,9 +230,7 @@ public class admin_dashboard implements ClickHandler{
         fillContactList();
     }
 
-
-
-        public void fillHomeList() {
+    public void fillHomeList() {
 
             table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
             TextColumn<Admin> idColumn = new TextColumn<Admin>() {
@@ -303,9 +300,7 @@ public class admin_dashboard implements ClickHandler{
 
         }
 
-
-
-        public void fillContactList() {
+    public void fillContactList() {
             AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
             rpc.authenticateContact(Admin_home.getUname(), callback);
             tablecontact.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
@@ -352,25 +347,13 @@ public class admin_dashboard implements ClickHandler{
 
         }
 
-
-
-
-//        verticalPanel.add(location);
-    //verticalPanel.add(id);
-    //verticalPanel.add(pass);
-
-
-
-
-        /*RootPanel.get().add(table);*/
-    public void refreshstatus()
-    {
+    //AUTOMATIC REFRESH RATE
+    public void refreshstatus() {
         AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
         rpc.authenticateDetails(Admin_home.getUname(), location.getSelectedItemText(), callback1);
     }
 
-    public void onClick(ClickEvent event)
-    {
+    public void onClick(ClickEvent event) {
 
         Widget sender = (Widget) event.getSource();
 
@@ -393,11 +376,18 @@ public class admin_dashboard implements ClickHandler{
                     refreshstatus();
                 }
             };
-            refresh.scheduleRepeating(10000);
+            refresh.scheduleRepeating(5000);
 
         }
+        if(sender.equals(adddriver))
+        {
+           AddDriver add1=new AddDriver();
+            int left = Window.getClientWidth()/ 2;
+            int top = Window.getClientHeight()/ 2;
+            add1.setPopupPosition(left, top);
+            add1.show();
+        }
             }
-
 
     private class AuthenticationHandler<T> implements AsyncCallback<ArrayList<Details>> {
 
@@ -451,6 +441,7 @@ public class admin_dashboard implements ClickHandler{
         }
 
     }
+
     private class locationList<T> implements AsyncCallback<ArrayList<Location>> {
 
 
@@ -471,6 +462,7 @@ public class admin_dashboard implements ClickHandler{
 
         }
     }
+
     private class sendsms<T> implements AsyncCallback<String>{
 
 

@@ -12,10 +12,21 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
+enum gen
+{
+    Male,
+    Female;
+}
 
 public class Postgreconnection extends RemoteServiceServlet implements DBConnection {
     private Connection con = null;
+
     //CONSTRUCTOR
     public Postgreconnection() {
         try {
@@ -29,32 +40,30 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     }
 
     @Override
-        //Home list
-        public ArrayList<Details> authenticateDetails(long sid,String lname)
-        {
-            /*Admin_home a = new Admin_home();*/
-            ArrayList<Details> det = new ArrayList<Details>();
-            try {
-                PreparedStatement driver = con.prepareStatement("\n" +
-                        "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\",\"Mobile_No\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"=? AND \"Location\".\"L_Name\"=?;");
-                driver.setLong(1,sid);
-                driver.setString(2,lname);
-                ResultSet rs = driver.executeQuery();
+    //Home list
+    public ArrayList<Details> authenticateDetails(long sid, String lname) {
+        /*Admin_home a = new Admin_home();*/
+        ArrayList<Details> det = new ArrayList<Details>();
+        try {
+            PreparedStatement driver = con.prepareStatement("\n" +
+                    "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\",\"Mobile_No\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"=? AND \"Location\".\"L_Name\"=?;");
+            driver.setLong(1, sid);
+            driver.setString(2, lname);
+            ResultSet rs = driver.executeQuery();
 
-                System.out.println("Drivers Table is");
-                while (rs.next()) {
-                    det.add(new Details( rs.getLong(1) , rs.getString(2),  rs.getInt(3), rs.getString(4), rs.getString(5),rs.getLong(6) , rs.getString(7) ));
-                }
-            } catch (SQLException f) {
-                f.printStackTrace();
+            System.out.println("Drivers Table is");
+            while (rs.next()) {
+                det.add(new Details(rs.getLong(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5), rs.getLong(6), rs.getString(7)));
             }
-            return det;
+        } catch (SQLException f) {
+            f.printStackTrace();
         }
+        return det;
+    }
 
-        //MY COPY PASTED WORK WITH CONTACT PRANKUR
+    //MY COPY PASTED WORK WITH CONTACT PRANKUR
     //CONTACT LIST
-    public ArrayList<Contact> authenticateContact(long sid)
-    {
+    public ArrayList<Contact> authenticateContact(long sid) {
         /*Admin_home a = new Admin_home();*/
         ArrayList<Contact> cont = new ArrayList<Contact>();
         try {
@@ -63,25 +72,25 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
                     "WHERE \"Driver\".\"Staff_ID\" = \"Staff\".\"Staff_ID\" AND \"Location\".\"Staff_ID\"=\"Staff\".\"Staff_ID\" AND\n" +
                     "      \"Driver\".\"Driver_ID\"=\"Location\".\"Driver_ID\" AND\n" +
                     "        \"Location\".\"Staff_ID\" = ?;");
-            driver.setLong(1,sid);
+            driver.setLong(1, sid);
             ResultSet rs = driver.executeQuery();
 
             System.out.println("Drivers Table is with");
             while (rs.next()) {
-                cont.add(new Contact(rs.getString(2),  rs.getString(3), rs.getLong(1), rs.getLong(5), rs.getString(4) ));
+                cont.add(new Contact(rs.getString(2), rs.getString(3), rs.getLong(1), rs.getLong(5), rs.getString(4)));
             }
         } catch (SQLException f) {
             f.printStackTrace();
         }
         return cont;
     }
+
     //LOCATION DROPDOWN
-    public ArrayList<Location> locationList(long sid)
-    {
+    public ArrayList<Location> locationList(long sid) {
         ArrayList<Location> locations = new ArrayList<Location>();
         try {
             PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=?");
-            loc.setLong(1,sid);
+            loc.setLong(1, sid);
             ResultSet rs = loc.executeQuery();
             System.out.println("Location");
             while (rs.next()) {
@@ -92,36 +101,39 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return locations;
     }
+
     //SERVER SIDE AUTHENTICATION LOGIN
-    public User authenticateUser(long name, String pass, int n)
-    {
-        User user= null;
+    public User authenticateUser(long name, String pass, int n) {
+        User user = null;
         try {
             PreparedStatement passrs = con.prepareStatement("Select \"Staff\".\"Password\" from \"Staff\" where \"Staff_ID\"=?");
             passrs.setLong(1, name);
             ResultSet rs = passrs.executeQuery();
-            System.out.println("User id passed "+name+"password passed "+pass);
+            System.out.println("User id passed " + name + "password passed " + pass);
             //System.out.println("number of rows "+rs.getRow());
-            if(rs.next()) {
+            if (rs.next()) {
                 //rs.next();
                 if (rs.getString(1).equals(pass)) {
                     user = new User(name, pass, 1);
-                    System.out.println("password "+rs.getString(1));
+                    System.out.println("password " + rs.getString(1));
                 } else {
                     user = new User(name, pass, 0);
                     System.out.println("password wrong " + rs.getString(1));
                 }
-            } else  {
+            } else {
                 user = new User(name, pass, -1);
                 System.out.println("password null ");
             }
+        } catch (PSQLException pe) {
+            System.out.println(pe);
+        } catch (SQLException e) {
+            System.out.println(e);
         }
-        catch(PSQLException pe){System.out.println(pe);}
-        catch (SQLException e){ System.out.println(e);}
 
         return user;
-        }
-   // SENDING SMS
+    }
+
+    // SENDING SMS
     public String sendSms(String phoneno) {
         try {
             // Construct data
@@ -147,7 +159,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
                 myURLConnection = myURL.openConnection();
                 myURLConnection.connect();
                 reader = new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
-                System.out.println("MESSAGE SENT SUCCESSFULLY "+ phoneno);
+                System.out.println("MESSAGE SENT SUCCESSFULLY " + phoneno);
 //finally close connection
                 reader.close();
             } catch (IOException e) {
@@ -158,8 +170,34 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         }
         return "SUCCESS";
     }
-}
 
+    public int insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid) {
+        try {
+                Date d = DOB;
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String strDate = dateFormat.format(d);
+            PreparedStatement p = con.prepareStatement("INSERT INTO \"Driver\"(\"F_Name\", \"Last_Name\", \"Mobile_No\", \"Aadhar\", \"Staff_ID\", \"Gender\", \"Email_ID\", \"Password\", \"DOB\")\n" +
+                    "VALUES (?,?,?, ?,?, ?, ?, ?,?);");
+            p.setString(1, f_name);
+            p.setString(2, l_name);
+            p.setLong(3, mobile_no);
+            p.setLong(4, aadhar);
+            p.setLong(5, sid);
+            p.setString(6, gender);
+            p.setString(7, email);
+            String pass = f_name+"123";
+            p.setString(8, pass);
+            java.sql.Date dob = java.sql.Date.valueOf(strDate);
+
+            p.setDate(9, dob );
+
+            int i = p.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return 1;
+    }
+}
 
 
 
