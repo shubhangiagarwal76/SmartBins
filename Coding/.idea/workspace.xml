@@ -10,36 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AdminContact.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AdminContact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$GetValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -745,7 +716,7 @@
       <workItem from="1577215703546" duration="789000" />
       <workItem from="1577264026692" duration="21456000" />
       <workItem from="1577341470551" duration="27503000" />
-      <workItem from="1577420146957" duration="29696000" />
+      <workItem from="1577420146957" duration="29973000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -782,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577431940645</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP">
+      <created>1577459799219</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577459799219</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -840,6 +818,7 @@
     <MESSAGE value="LOGIN PROGRAM" />
     <MESSAGE value="PENDING MESSAGE WORK COMPLETED(NOTIFY+FORGET PASSWORD)" />
     <MESSAGE value="FRONT END DYNAMIC REFRESH RATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="FRONT END DYNAMIC REFRESH RATE" />
+    <MESSAGE value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
   </component>
 </project>
