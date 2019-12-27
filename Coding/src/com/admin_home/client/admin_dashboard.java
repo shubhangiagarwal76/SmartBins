@@ -11,6 +11,8 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.Random;
+import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.google.gwt.user.client.ui.*;
@@ -23,6 +25,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import com.admin_home.server.Postgreconnection;
 //import sun.font.Decoration;
 //import com.admin_home.server.demo;
@@ -46,12 +49,13 @@ public class admin_dashboard implements ClickHandler{
     VerticalPanel verticalPanel, verticalPanel1;
     ListBox location;
     DecoratorPanel decoratorPanel, decoratorPanel1;
-    //int count;
+    static int count=0;
     Label Home;
     Label Contact;
     HorizontalPanel hpanel;
     Anchor maps;
     private static String phone;
+    com.google.gwt.user.client.Timer refresh;
 
 
     //INNER ADMIN CLASS FOR HOME LIST
@@ -210,6 +214,8 @@ public class admin_dashboard implements ClickHandler{
     {
         addingpaneldashboard();
         connectionEstd();
+
+
         RootPanel.get().add(tp);
     }
     public void connectionEstd() {
@@ -225,9 +231,7 @@ public class admin_dashboard implements ClickHandler{
         fillContactList();
     }
 
-    private static interface GetValue<C> {
-        C getValue(Admin contact);
-    }
+
 
         public void fillHomeList() {
 
@@ -359,13 +363,38 @@ public class admin_dashboard implements ClickHandler{
 
 
         /*RootPanel.get().add(table);*/
+    public void refreshstatus()
+    {
+        AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
+        rpc.authenticateDetails(Admin_home.getUname(), location.getSelectedItemText(), callback1);
+    }
 
-    public void onClick(ClickEvent event) {
+    public void onClick(ClickEvent event)
+    {
 
         Widget sender = (Widget) event.getSource();
+
         if (sender.equals(search)) {
+            count++;
             AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
             rpc.authenticateDetails(Admin_home.getUname(), location.getSelectedItemText(), callback1);
+            refresh = new Timer() {
+
+                @Override
+                public void run() {
+                    if (count>=2)
+
+                    {
+                         refresh.cancel();
+                         count =0;
+                        refreshstatus();
+                    }
+                    else
+                    refreshstatus();
+                }
+            };
+            refresh.scheduleRepeating(10000);
+
         }
             }
 
@@ -385,7 +414,7 @@ public class admin_dashboard implements ClickHandler{
                 String l = details.getLocation();
                 String f = details.getF_name();
                 String ln = details.getL_name();
-                String s = Integer.toString(details.getStatus());
+                String s = Integer.toString(details.getStatus()* Random.nextInt(5));
                 String mn = Long.toString(details.getMobile_no());
                 String n = details.getNotify();
 
