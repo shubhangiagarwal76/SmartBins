@@ -1,6 +1,7 @@
 package com.admin_home.server;
 
 import com.admin_home.client.*;
+import com.admin_home.client.Driver;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.postgresql.util.PSQLException;
 
@@ -31,7 +32,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     public Postgreconnection() {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
 
 
         } catch (Exception ex) {
@@ -46,7 +47,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         ArrayList<Details> det = new ArrayList<Details>();
         try {
             PreparedStatement driver = con.prepareStatement("\n" +
-                    "SELECT \"Dustbin_ID\", \"L_Name\", \"Status\", \"F_Name\", \"Last_Name\",\"Mobile_No\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"=? AND \"Location\".\"L_Name\"=?;");
+                    "SELECT \"Dustbin_ID\", \"Location_name\", \"Status\", \"F_Name\", \"Last_Name\",\"Mobile_No\", \"Driver\".\"Driver_ID\" FROM \"Dustbin\", \"Location\", \"Driver\" WHERE \"Driver\".\"Driver_ID\" = \"Location\".\"Driver_ID\" AND \"Location\".\"Driver_ID\" = \"Dustbin\".\"Driver_ID\" AND \"Driver\".\"Staff_ID\"=? AND \"Location\".\"Location_name\"=?;");
             driver.setLong(1, sid);
             driver.setString(2, lname);
             ResultSet rs = driver.executeQuery();
@@ -67,7 +68,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         /*Admin_home a = new Admin_home();*/
         ArrayList<Contact> cont = new ArrayList<Contact>();
         try {
-            PreparedStatement driver = con.prepareStatement("SELECT \"Driver\".\"Driver_ID\", \"Driver\".\"F_Name\", \"Last_Name\",\"Location\".\"L_Name\",\"Driver\".\"Mobile_No\"\n" +
+            PreparedStatement driver = con.prepareStatement("SELECT \"Driver\".\"Driver_ID\", \"Driver\".\"F_Name\", \"Last_Name\",\"Location\".\"Location_name\",\"Driver\".\"Mobile_No\"\n" +
                     "FROM \"Driver\", \"Staff\",\"Location\"\n" +
                     "WHERE \"Driver\".\"Staff_ID\" = \"Staff\".\"Staff_ID\" AND \"Location\".\"Staff_ID\"=\"Staff\".\"Staff_ID\" AND\n" +
                     "      \"Driver\".\"Driver_ID\"=\"Location\".\"Driver_ID\" AND\n" +
@@ -89,7 +90,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     public ArrayList<Location> locationList(long sid) {
         ArrayList<Location> locations = new ArrayList<Location>();
         try {
-            PreparedStatement loc = con.prepareStatement("SELECT \"L_Name\" FROM \"Location\" WHERE \"Staff_ID\"=?");
+            PreparedStatement loc = con.prepareStatement("SELECT DISTINCT \"Location_name\" FROM \"Location\" WHERE \"Staff_ID\"=?");
             loc.setLong(1, sid);
             ResultSet rs = loc.executeQuery();
             System.out.println("Location");
@@ -171,12 +172,16 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         return "SUCCESS";
     }
 
-    public int insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid) {
+    public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid, String location) {
+        Driver d1 = null;
         try {
-                Date d = DOB;
+            //java.util.Date to String
+            Date d = DOB;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String strDate = dateFormat.format(d);
-            PreparedStatement p = con.prepareStatement("INSERT INTO \"Driver\"(\"F_Name\", \"Last_Name\", \"Mobile_No\", \"Aadhar\", \"Staff_ID\", \"Gender\", \"Email_ID\", \"Password\", \"DOB\")\n" +
+
+            //INSERTING IN DRIVERS TABLE QUERY
+            PreparedStatement p = con.prepareStatement("INSERT INTO \"Driver\"(\"F_Name\", \"Last_Name\", \"Mobile_No\", \"Aadhar\", \"Staff_ID\", \"gender\", \"Email_ID\", \"Password\", \"dob\")\n" +
                     "VALUES (?,?,?, ?,?, ?, ?, ?,?);");
             p.setString(1, f_name);
             p.setString(2, l_name);
@@ -185,17 +190,36 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
             p.setLong(5, sid);
             p.setString(6, gender);
             p.setString(7, email);
+
+            //AUTOMATIC SETTING OF PASSWORD
             String pass = f_name+"123";
             p.setString(8, pass);
+
+            //STRING TO JAVA.SQL.DATE
             java.sql.Date dob = java.sql.Date.valueOf(strDate);
-
             p.setDate(9, dob );
-
             int i = p.executeUpdate();
+
+
+            //RETURNING DRIVER ID AND PASSWORD
+            PreparedStatement p1 = con.prepareStatement("Select \"Driver_ID\", \"Password\" From \"Driver\" where \"Mobile_No\"=?;");
+            p1.setLong(1, mobile_no);
+            ResultSet rs = p1.executeQuery();
+            rs.next();
+            d1 = new Driver(rs.getLong(1), rs.getString(2));
+
+
+            //INSERTING INTO LOCATION TABLE OF ADD DRIVER
+            PreparedStatement p2 = con.prepareStatement("insert into \"Location\"(\"Staff_ID\", \"Driver_ID\", \"Location_name\") VALUES(?, ?, ?);");
+            p2.setLong(1,sid);
+            p2.setLong(2, rs.getLong(1) );
+            p2.setString(3,location);
+            p2.executeQuery();
         } catch (SQLException e) {
             System.out.println(e);
+
         }
-        return 1;
+        return d1;
     }
 }
 
