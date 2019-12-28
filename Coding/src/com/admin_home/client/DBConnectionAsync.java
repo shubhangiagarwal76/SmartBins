@@ -12,4 +12,5 @@ public interface DBConnectionAsync {
     public void locationList(long sid, AsyncCallback<ArrayList<Location>> callback2);
     public void sendSms(String phoneno, AsyncCallback<String> callback4);
     public void insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid, String location, AsyncCallback<Driver> callback5);
+    public void insertDustbin(long drid, double cap, AsyncCallback<String> callback6);
 }
