@@ -9,23 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user__2_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
-    </list>
+    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -704,7 +688,17 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1de020e3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1023824" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1de020e3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@8afe9d3" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1de020e3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4e17dea9" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
