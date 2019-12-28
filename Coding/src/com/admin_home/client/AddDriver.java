@@ -200,7 +200,7 @@ public class AddDriver extends DialogBox implements ClickHandler {
         public void onSuccess(Driver result) {
            if(result.getDid()==0000 && result.getPass().equals(""))
            {
-               Window.alert("ALREADY REGISTED");
+               Window.alert("ALREADY REGISTERED");
            }
            else
            {

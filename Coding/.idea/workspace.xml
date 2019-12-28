@@ -10,25 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user__3_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -788,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577459799219</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION">
+      <created>1577528029439</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577528029439</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -847,6 +836,7 @@
     <MESSAGE value="PENDING MESSAGE WORK COMPLETED(NOTIFY+FORGET PASSWORD)" />
     <MESSAGE value="FRONT END DYNAMIC REFRESH RATE" />
     <MESSAGE value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
+    <MESSAGE value="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
   </component>
 </project>
