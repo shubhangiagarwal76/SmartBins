@@ -63,7 +63,7 @@ public class admin_dashboard implements ClickHandler{
     Anchor maps;
     private static String phone;
     Timer refresh;
-    Button adddriver;
+    Button adddriver, addDustbin;
 
 
     //INNER ADMIN CLASS FOR HOME LIST
@@ -162,6 +162,7 @@ public class admin_dashboard implements ClickHandler{
     public admin_dashboard() {
 
         adddriver=new Button("ADD DRIVER");
+        addDustbin=new Button("REGISTER DUSTBIN");
         verticalPanel = new VerticalPanel();
         verticalPanel1 = new VerticalPanel();
         search = new Button("Search");
@@ -187,6 +188,7 @@ public class admin_dashboard implements ClickHandler{
         //search.addStyleName("gwt-searchbutton");
         search.addClickHandler(this);
         adddriver.addClickHandler(this);
+        addDustbin.addClickHandler(this);
         //Home.addStyleName("labelhome_Stats_contact");
         //Contact.addStyleName("labelhome_Stats_contact");
         decoratorPanel.setWidth("1200");
@@ -203,6 +205,7 @@ public class admin_dashboard implements ClickHandler{
         tp.add(decoratorPanel1, Contact);
         verticalPanel.add(maps);
         verticalPanel.add(adddriver);
+        verticalPanel.add(addDustbin);
         tp.selectTab(0);
         tp.setWidth("1200");
         tp.setHeight("100");
@@ -357,7 +360,8 @@ public class admin_dashboard implements ClickHandler{
 
         Widget sender = (Widget) event.getSource();
 
-        if (sender.equals(search)) {
+        if (sender.equals(search))
+        {
             count++;
             AsyncCallback<ArrayList<Details>> callback1 = new AuthenticationHandler<ArrayList<Details>>();
             rpc.authenticateDetails(Admin_home.getUname(), location.getSelectedItemText(), callback1);
@@ -381,11 +385,20 @@ public class admin_dashboard implements ClickHandler{
         }
         if(sender.equals(adddriver))
         {
-           AddDriver add1=new AddDriver();
+            AddDriver add1=new AddDriver();
             int left = Window.getClientWidth()/ 2;
             int top = Window.getClientHeight()/ 2;
             add1.setPopupPosition(left, top);
             add1.show();
+        }
+        if(sender.equals(addDustbin)){
+
+            AddDustbin ad = new AddDustbin();
+            int left = Window.getClientWidth()/ 2;
+            int top = Window.getClientHeight()/ 2;
+            ad.setPopupPosition(left, top);
+            ad.show();
+
         }
             }
 

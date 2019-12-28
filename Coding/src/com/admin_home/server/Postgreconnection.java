@@ -19,11 +19,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-enum gen
-{
-    Male,
-    Female;
-}
 
 public class Postgreconnection extends RemoteServiceServlet implements DBConnection {
     private Connection con = null;
@@ -32,7 +27,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     public Postgreconnection() {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
 
 
         } catch (Exception ex) {
@@ -172,8 +167,10 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
         return "SUCCESS";
     }
 
+    //ADD DRIVER
     public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid, String location) {
         Driver d1 = null;
+
         try {
             //java.util.Date to String
             Date d = DOB;
@@ -215,11 +212,60 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
             p2.setLong(2, rs.getLong(1) );
             p2.setString(3,location);
             p2.executeQuery();
-        } catch (SQLException e) {
-            System.out.println(e);
+        }
+        catch(PSQLException exp)
+        {
+            System.out.println(exp);
+            d1=new Driver(0000, "");
 
         }
+        catch (SQLException e) {
+            System.out.println(e);
+            d1=new Driver(0000, "");
+
+        }
+        catch(Exception exp)
+        {
+            System.out.println(exp);
+            d1=new Driver(0000, "");
+
+        }
+
         return d1;
+    }
+
+    //ADD DUSTBIN
+    public String insertDustbin(long drid, double cap) {
+        String r = null;
+        try {
+            PreparedStatement d = con.prepareStatement("INSERT INTO \"Dustbin\"(\"Driver_ID\", \"Capacity\")\n" +
+                    "VALUES (?,?);");
+            d.setLong(1, drid);
+            d.setDouble(2, cap);
+            System.out.println(drid + " " + cap);
+            int i = d.executeUpdate();
+            r = "S";
+
+        }
+
+    catch(PSQLException exception)
+    {
+        System.out.println(exception);
+        r = "E";
+    }
+    catch (SQLException e)
+    {
+            e.printStackTrace();
+            r = "E";
+    }
+    catch (Exception e)
+    {
+        System.out.println("PLSQL EXCEPTIION HANDLE");
+        e.printStackTrace();
+        r = "E";
+    }
+
+        return r;
     }
 }
 
