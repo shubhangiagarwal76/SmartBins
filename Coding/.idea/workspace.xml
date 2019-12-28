@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/MAPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -733,6 +728,7 @@
       <workItem from="1577264026692" duration="21456000" />
       <workItem from="1577341470551" duration="27503000" />
       <workItem from="1577420146957" duration="29973000" />
+      <workItem from="1577556596777" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -797,7 +793,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577530403313</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="MAP WORK + HISTORY WORK PENDING">
+      <created>1577556884625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577556884625</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -858,6 +861,7 @@
     <MESSAGE value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
     <MESSAGE value="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
     <MESSAGE value="RECOMMIT ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
-    <option name="LAST_COMMIT_MESSAGE" value="RECOMMIT ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
+    <MESSAGE value="MAP WORK + HISTORY WORK PENDING" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAP WORK + HISTORY WORK PENDING" />
   </component>
 </project>
