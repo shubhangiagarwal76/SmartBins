@@ -167,7 +167,7 @@ public class admin_dashboard implements ClickHandler{
         verticalPanel = new VerticalPanel();
         verticalPanel1 = new VerticalPanel();
         search = new Button("Search");
-        maps=new Anchor("CLICK HERE TO SEE MAPS");
+        maps=new Anchor("CLICK HERE TO SEE MAPS","MAPS.html","_blank");
         id = new TextBox();
         pass = new TextBox();
         Home=new Label("Home");
@@ -201,7 +201,7 @@ public class admin_dashboard implements ClickHandler{
         verticalPanel.add(hpanel);
         decoratorPanel.add(verticalPanel);
         decoratorPanel1.add(verticalPanel1);
-        maps.setHref("MAPS.html");
+        //maps.setHref("MAPS.html");
         tp.add(decoratorPanel,Home);
         tp.add(decoratorPanel1, Contact);
         verticalPanel.add(maps);
@@ -236,120 +236,120 @@ public class admin_dashboard implements ClickHandler{
 
     public void fillHomeList() {
 
-            table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-            TextColumn<Admin> idColumn = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getDustbin_ID();
-                }
-            };
-            TextColumn<Admin> locationColumn = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getLocation();
-                }
-            };
-            TextColumn<Admin> fnameColumn = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getF_name();
-                }
-            };
-            TextColumn<Admin> lnameColumn = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getL_name();
-                }
-            };
-            TextColumn<Admin> statusColumn = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getStatus();
-                }
-            };
-            TextColumn<Admin> Mobileno = new TextColumn<Admin>() {
-                @Override
-                public String getValue(Admin object) {
-                    return object.getMobileno();
-                }
-            };
-            Column<Admin, String> notifyColumn = new Column<Admin, String>(buttonCell) {
-                @Override
-                public String getValue(Admin object) {
+        table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
+        TextColumn<Admin> idColumn = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getDustbin_ID();
+            }
+        };
+        TextColumn<Admin> locationColumn = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getLocation();
+            }
+        };
+        TextColumn<Admin> fnameColumn = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getF_name();
+            }
+        };
+        TextColumn<Admin> lnameColumn = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getL_name();
+            }
+        };
+        TextColumn<Admin> statusColumn = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getStatus();
+            }
+        };
+        TextColumn<Admin> Mobileno = new TextColumn<Admin>() {
+            @Override
+            public String getValue(Admin object) {
+                return object.getMobileno();
+            }
+        };
+        Column<Admin, String> notifyColumn = new Column<Admin, String>(buttonCell) {
+            @Override
+            public String getValue(Admin object) {
 
-                    return "Notify";
-                }};
-            FieldUpdater f = new FieldUpdater<Admin, String>() {
-                @Override
-                public void update(int index, Admin object, String value) {
-                    phone=object.getMobileno();
-                    AsyncCallback <String> callback4 = new sendsms<String>();
-                    rpc.sendSms(phone, callback4);
-                    Window.alert("MESSAGE SUCCESSFULLY SEND TO: "+ object.getMobileno());
-                }};
-            notifyColumn.setFieldUpdater(f);
-
-
-
-            table.addColumn(idColumn, "DUSTBIN_ID");
-            table.addColumn(locationColumn, "LOCATION");
-            table.addColumn(statusColumn, "STATUS");
-            table.addColumn(fnameColumn, "FIRST NAME");
-            table.addColumn(lnameColumn, "LAST NAME");
-            table.addColumn(Mobileno,"MOBILE NUMBER");
-            table.addColumn(notifyColumn,"NOTIFY");
+                return "Notify";
+            }};
+        FieldUpdater f = new FieldUpdater<Admin, String>() {
+            @Override
+            public void update(int index, Admin object, String value) {
+                phone=object.getMobileno();
+                AsyncCallback <String> callback4 = new sendsms<String>();
+                rpc.sendSms(phone, callback4);
+                Window.alert("MESSAGE SUCCESSFULLY SEND TO: "+ object.getMobileno());
+            }};
+        notifyColumn.setFieldUpdater(f);
 
 
-            verticalPanel.add(table);
 
-        }
+        table.addColumn(idColumn, "DUSTBIN_ID");
+        table.addColumn(locationColumn, "LOCATION");
+        table.addColumn(statusColumn, "STATUS");
+        table.addColumn(fnameColumn, "FIRST NAME");
+        table.addColumn(lnameColumn, "LAST NAME");
+        table.addColumn(Mobileno,"MOBILE NUMBER");
+        table.addColumn(notifyColumn,"NOTIFY");
+
+
+        verticalPanel.add(table);
+
+    }
 
     public void fillContactList() {
-            AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
-            rpc.authenticateContact(Admin_home.getUname(), callback);
-            tablecontact.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-            TextColumn<AdminContact> idColumncontact = new TextColumn<AdminContact>() {
-                @Override
-                public String getValue(AdminContact objectcontact) {
-                    return objectcontact.getDriver_ID();
-                }
-            };
-            TextColumn<AdminContact> locationconatct = new TextColumn<AdminContact>() {
-                @Override
-                public String getValue(AdminContact object) {
-                    return object.getLocation();
-                }
-            };
-            TextColumn<AdminContact> fnamecolumncontact = new TextColumn<AdminContact>() {
-                @Override
-                public String getValue(AdminContact object) {
-                    return object.getF_name();
-                }
-            };
-            TextColumn<AdminContact> lnameColumncontact = new TextColumn<AdminContact>() {
-                @Override
-                public String getValue(AdminContact object) {
-                    return object.getL_name();
-                }
-            };
-            TextColumn<AdminContact> contactcolumncontact = new TextColumn<AdminContact>() {
-                @Override
-                public String getValue(AdminContact object) {
-                    return object.getContactNo();
-                }
-            };
+        AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
+        rpc.authenticateContact(Admin_home.getUname(), callback);
+        tablecontact.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
+        TextColumn<AdminContact> idColumncontact = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact objectcontact) {
+                return objectcontact.getDriver_ID();
+            }
+        };
+        TextColumn<AdminContact> locationconatct = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object) {
+                return object.getLocation();
+            }
+        };
+        TextColumn<AdminContact> fnamecolumncontact = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object) {
+                return object.getF_name();
+            }
+        };
+        TextColumn<AdminContact> lnameColumncontact = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object) {
+                return object.getL_name();
+            }
+        };
+        TextColumn<AdminContact> contactcolumncontact = new TextColumn<AdminContact>() {
+            @Override
+            public String getValue(AdminContact object) {
+                return object.getContactNo();
+            }
+        };
 
 
-            tablecontact.addColumn(idColumncontact, "DRIVER_ID");
-            tablecontact.addColumn(locationconatct, "LOCATION");
-            tablecontact.addColumn(fnamecolumncontact, "FIRST NAME");
-            tablecontact.addColumn(lnameColumncontact, "LAST NAME");
-            tablecontact.addColumn(contactcolumncontact, "CONTACT");
+        tablecontact.addColumn(idColumncontact, "DRIVER_ID");
+        tablecontact.addColumn(locationconatct, "LOCATION");
+        tablecontact.addColumn(fnamecolumncontact, "FIRST NAME");
+        tablecontact.addColumn(lnameColumncontact, "LAST NAME");
+        tablecontact.addColumn(contactcolumncontact, "CONTACT");
 
 
-            verticalPanel1.add(tablecontact);
+        verticalPanel1.add(tablecontact);
 
-        }
+    }
 
     //AUTOMATIC REFRESH RATE
     public void refreshstatus() {
@@ -373,12 +373,12 @@ public class admin_dashboard implements ClickHandler{
                     if (count>=2)
 
                     {
-                         refresh.cancel();
-                         count =0;
+                        refresh.cancel();
+                        count =0;
                         refreshstatus();
                     }
                     else
-                    refreshstatus();
+                        refreshstatus();
                 }
             };
             refresh.scheduleRepeating(5000);
@@ -401,7 +401,7 @@ public class admin_dashboard implements ClickHandler{
             ad.show();
 
         }
-            }
+    }
 
     private class AuthenticationHandler<T> implements AsyncCallback<ArrayList<Details>> {
 

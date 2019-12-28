@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="MAPS.css" type="text/css"/>
 
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+<!--    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>-->
+<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />-->
 
 </head>
 <body>
@@ -24,42 +24,12 @@
     <img src="..\resources\icon1.png">
     </div>
 
-    <div id='map' style='width: 1200px; height: 800px;'></div>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbmt1ciIsImEiOiJjazBlZW9tZDkwMDhjM3B1ZzJtdWgwY2lzIn0.JYo2k03E6aW3f4UYp0Feww';
-        var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-v9',
-        center: [77.362423,28.619753],
-        zoom:18
-        });
-        map.on('load', function() {
-            map.loadImage('resources\\trash_can-512.png', function(error, image) {
-            if (error) throw error;
-            map.addImage('dustbin', image);
-            map.addLayer({
-                "id": "points",
-                "type": "symbol",
-                "source": {
-                    "type": "geojson",
-                    "data": {
-                        "type": "FeatureCollection",
-                        "features": [{
-                            "type": "Feature",
-                            "geometry": {
-                                "type": "Point",
-                                "coordinates": [77.362423,28.619753]
-                            }
-                        }]
-                    }
-                },
-                "layout": {
-                    "icon-image": "dustbin",
-                    "icon-size": 0.10
-                }
-            });
-        });
-    });
-    </script>
+    <h2> ENTER YOUR REGISTERED ID TO SEE MAP</h2>
+
+    <form action="MAPS.jsp" method="post">
+        <input type="text" name="id"><br>
+        <input type="submit" value="Submit"> <br>
+    </form>
+
 </body>
 </html>
