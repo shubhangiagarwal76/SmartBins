@@ -289,7 +289,7 @@ public class Admin_home  implements EntryPoint, ClickHandler{
         vpanel.add(hpanel);
         //vpanel.add(test);
         hpanel.setSpacing(10);
-        vpanel.setStyleName("Vertical");
+       // vpanel.setStyleName("Vertical");
         forget.setHref("LOGIN.html");
         forget.setText("Forget Password?");
         forget.setSize("2","2");

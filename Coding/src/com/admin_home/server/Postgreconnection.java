@@ -27,7 +27,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     public Postgreconnection() {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
 
 
         } catch (Exception ex) {
@@ -211,7 +211,7 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
             p2.setLong(1,sid);
             p2.setLong(2, rs.getLong(1) );
             p2.setString(3,location);
-            p2.executeQuery();
+            p2.executeUpdate();
         }
         catch(PSQLException exp)
         {
