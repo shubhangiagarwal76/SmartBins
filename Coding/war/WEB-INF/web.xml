@@ -26,5 +26,6 @@
         <welcome-file>LOGIN.html</welcome-file>
         <welcome-file>forget.jsp</welcome-file>
         <welcome-file>MAPS.html</welcome-file>
+        <welcome-file>MAPS.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

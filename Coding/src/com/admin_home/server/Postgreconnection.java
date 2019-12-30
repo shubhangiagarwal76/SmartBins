@@ -168,7 +168,8 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     }
 
     //ADD DRIVER
-    public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid, String location) {
+    public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender, String address, long sid, String location)
+    {
         Driver d1 = null;
 
         try {

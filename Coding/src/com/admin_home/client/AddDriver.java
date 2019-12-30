@@ -198,15 +198,15 @@ public class AddDriver extends DialogBox implements ClickHandler {
 
         @Override
         public void onSuccess(Driver result) {
-           if(result.getDid()==0000 && result.getPass().equals(""))
-           {
-               Window.alert("ALREADY REGISTERED");
-           }
-           else
-           {
-               DriverInfo driverInfo = new DriverInfo(result.getDid(), result.getPass());
-               Window.alert("Driver ID is: " + driverInfo.getDid() + "  " + "Password is: " + driverInfo.getPass());
-           }
+            if(result.getDid()==0000 && result.getPass().equals(""))
+            {
+                Window.alert("ALREADY REGISTERED");
+            }
+            else
+            {
+                DriverInfo driverInfo = new DriverInfo(result.getDid(), result.getPass());
+                Window.alert("Driver ID is: " + driverInfo.getDid() + "  " + "Password is: " + driverInfo.getPass());
+            }
 
         }
     }
@@ -233,4 +233,5 @@ public class AddDriver extends DialogBox implements ClickHandler {
 
     }
 }
+
 

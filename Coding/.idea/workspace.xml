@@ -9,23 +9,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="HISTORY TOKEN ADDED">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gwt_user__2_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user.xml" beforeDir="false" />
+    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="HISTORY TOKEN AND CLUSTER MAP">
+      <change afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" afterDir="false" />
@@ -42,11 +37,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/gen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/MAPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -748,7 +743,7 @@
       <workItem from="1577264026692" duration="21456000" />
       <workItem from="1577341470551" duration="27503000" />
       <workItem from="1577420146957" duration="29973000" />
-      <workItem from="1577687537156" duration="2867000" />
+      <workItem from="1577687537156" duration="4696000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -799,7 +794,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577528029439</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HISTORY TOKEN ADDED">
+      <created>1577691863730</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577691863730</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -860,6 +862,7 @@
     <MESSAGE value="ADD DRIVER COMPLETED WITHOUT PASSWORD ENCODING AND CLIENT VALIDATION AND WITHOUT WINDOW POPUP" />
     <MESSAGE value="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
     <MESSAGE value="HISTORY TOKEN ADDED" />
-    <option name="LAST_COMMIT_MESSAGE" value="HISTORY TOKEN ADDED" />
+    <MESSAGE value="HISTORY TOKEN AND CLUSTER MAP" />
+    <option name="LAST_COMMIT_MESSAGE" value="HISTORY TOKEN AND CLUSTER MAP" />
   </component>
 </project>
