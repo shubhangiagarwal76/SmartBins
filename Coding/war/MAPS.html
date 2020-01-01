@@ -6,9 +6,13 @@
 
     <link rel="stylesheet" href="MAPS.css" type="text/css"/>
 
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+   <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />-->
 
-<!--    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>-->
-<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 <body>
@@ -24,12 +28,74 @@
     <img src="..\resources\icon1.png">
     </div>
 
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+    <div id='map' style='width: 1200px; height: 800px;'></div>
+
+   <!-- <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbmt1ciIsImEiOiJjazBlZW9tZDkwMDhjM3B1ZzJtdWgwY2lzIn0.JYo2k03E6aW3f4UYp0Feww';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        center: [77.362423,28.619753],
+        zoom:18
+        });
+        map.on('load', function() {
+            map.loadImage('resources\\trash_can-512.png', function(error, image) {
+            if (error) throw error;
+            map.addImage('dustbin', image);
+            map.addLayer({
+                "id": "points",
+                "type": "symbol",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [{
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [77.362423,28.619753]
+                            }
+                        }]
+                    }
+                },
+                "layout": {
+                    "icon-image": "dustbin",
+                    "icon-size": 0.10
+                }
+            });
+        });
+    });
+    </script>-->
+    <!--Here we don't use the second argument to map, since that would automatically-->
     <h2> ENTER YOUR REGISTERED ID TO SEE MAP</h2>
 
     <form action="MAPS.jsp" method="post">
         <input type="text" name="id"><br>
         <input type="submit" value="Submit"> <br>
     </form>
+    <script>
+        L.mapbox.accessToken = 'pk.eyJ1IjoicHJhbmt1ciIsImEiOiJjazBlZW9tZDkwMDhjM3B1ZzJtdWgwY2lzIn0.JYo2k03E6aW3f4UYp0Feww';
+        // load in non-clustered markers from the layer. Instead we add just the
+        // Since featureLayer is an asynchronous method, we use the `.on('ready'`
+
+        // backing styleLayer, and then use the featureLayer only for its data.
+        var map = L.mapbox.map('map')
+            .setView([40.73, -74.011], 13)
+            .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+        // call to only use its marker data once we know it is actually loaded.
+        L.mapbox.featureLayer('examples.map-h61e8o8e').on('ready', function(e) {
+            // The clusterGroup gets each marker in the group added to it
+            // once loaded, and then is added to the map
+            var clusterGroup = new L.MarkerClusterGroup();
+            e.target.eachLayer(function(layer) {
+                clusterGroup.addLayer(layer);
+            });
+            map.addLayer(clusterGroup);
+        });
+    </script>
 
 </body>
 </html>

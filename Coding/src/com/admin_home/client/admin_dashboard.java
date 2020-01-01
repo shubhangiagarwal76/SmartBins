@@ -9,6 +9,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.dom.client.ScriptElement;
 import com.google.gwt.dom.client.Style;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
@@ -16,13 +18,10 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
 import com.google.gwt.user.cellview.client.TextColumn;
-import com.google.gwt.user.client.Random;
-import com.google.gwt.user.client.Timer;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.*;
 import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 //import com.google.gwt.maps.client.*;
@@ -183,7 +182,8 @@ public class admin_dashboard implements ClickHandler{
 
     }
 
-    public static String getPhone(){ return phone;}
+    public static String getPhone() {
+        return phone;}
 
     public void addingpaneldashboard(){
         //search.addStyleName("gwt-searchbutton");
@@ -204,6 +204,36 @@ public class admin_dashboard implements ClickHandler{
         //maps.setHref("MAPS.html");
         tp.add(decoratorPanel,Home);
         tp.add(decoratorPanel1, Contact);
+
+        //ON CHANGE OF TAB PANELS HISTORY ADDED
+        tp.addSelectionHandler(new SelectionHandler<Integer>() {
+            @Override
+            public void onSelection(SelectionEvent<Integer> event) {
+                History.newItem("page"+event.getSelectedItem());
+            }
+        });
+
+        //INVOCATION OF HISTORY ON TABS ONLY
+        History.addValueChangeHandler(new ValueChangeHandler<String>() {
+            public void onValueChange(ValueChangeEvent<String> event) {
+                String historyToken = event.getValue();
+                //Window.alert(historyToken);
+                try {
+                    if (historyToken.substring(0, 4).equals("page")) {
+                        String tabIndexToken = historyToken.substring(4, 5);
+                        int tabIndex = Integer.parseInt(tabIndexToken);
+                        // Select the specified tab panel
+                        tp.selectTab(tabIndex);
+                    } else {
+                        tp.selectTab(0);
+                    }
+
+                } catch (IndexOutOfBoundsException e) {
+                    tp.selectTab(0);
+                }
+            }
+        });
+
         verticalPanel.add(maps);
         verticalPanel.add(adddriver);
         verticalPanel.add(addDustbin);
