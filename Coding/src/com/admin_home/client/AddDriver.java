@@ -13,6 +13,8 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.gwt.user.datepicker.client.DatePicker;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -182,9 +184,49 @@ public class AddDriver extends DialogBox implements ClickHandler {
     }
 
     public void onClick(ClickEvent event) {
-        AsyncCallback<Driver> callback5 = new insertDriver<Driver>();
-        rpc.insertInfo(fname.getText(), lname.getText(), Long.parseLong(mobileno.getText()), Long.parseLong(aadhar.getText()), dateBox.getValue(), email.getText(), genderselected(), address.getText(), Admin_home.getUname(), location.getSelectedItemText(), callback5);
-        AddDriver.this.hide();
+        String f=fname.getText().trim().toUpperCase();
+        String l=lname.getText().trim().toUpperCase();
+        String mo=mobileno.getText().trim();
+        String ad=aadhar.getText().trim();
+        String em=email.getText().trim().toUpperCase();
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        if(f.matches("^[0-9\\.]{1,10}$") || l.matches("^[0-9\\.]{1,10}$")){
+            Window.alert("Enter valid First name and Last name");
+            fname.selectAll();
+            fname.setText("");
+            lname.selectAll();
+            lname.setText("");
+            return;
+        }
+        else if(!em.matches(emailRegex))
+        {
+            Window.alert("Enter valid Email Address");
+            email.selectAll();
+            email.setText("");
+            return;
+        }
+        else if(Long.parseLong(mo)<1000000000 || Long.parseLong(mo)>9999999999L){
+            Window.alert("Enter valid mobile no.");
+            email.selectAll();
+            email.setText("");
+            return;
+        }
+        else if(Long.parseLong(ad)<100000000000L || Long.parseLong(ad)>999999999999L){
+            Window.alert("Enter valid Aadhar no");
+            aadhar.selectAll();
+            aadhar.setText("");
+            return;
+        }
+        else
+        {
+            AsyncCallback<Driver> callback5 = new insertDriver<Driver>();
+            rpc.insertInfo(fname.getText(), lname.getText(), Long.parseLong(mobileno.getText()), Long.parseLong(aadhar.getText()), dateBox.getValue(), email.getText(), genderselected(), address.getText(), Admin_home.getUname(), location.getSelectedItemText(), callback5);
+            AddDriver.this.hide();
+        }
     }
 
     private class insertDriver<T> implements AsyncCallback<Driver> {
