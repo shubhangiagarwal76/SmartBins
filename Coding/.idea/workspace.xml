@@ -9,10 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
