@@ -37,6 +37,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.gwt.user.datepicker.client.DatePicker;
+import com.sun.javafx.webkit.prism.WCTextRunImpl;
 
 //import sun.font.Decoration;
 //import com.admin_home.server.demo;
@@ -53,17 +54,19 @@ public class admin_dashboard implements ClickHandler{
     private TabPanel tp;
     CellTable<Admin> table;
     CellTable<AdminContact> tablecontact;
-    VerticalPanel verticalPanel, verticalPanel1;
+    VerticalPanel verticalPanel, verticalPanel1,verticalPanel2;
     ListBox location;
     DecoratorPanel decoratorPanel, decoratorPanel1;
     static int count=0;
     Label Home;
     Label Contact;
-    HorizontalPanel hpanel;
+    HorizontalPanel hpanel,hpanel2;
     Anchor maps;
     private static String phone;
     Timer refresh;
     Button adddriver, addDustbin;
+    DisclosurePanel disclosurePanel;
+    Hyperlink logout;
 
 
     //INNER ADMIN CLASS FOR HOME LIST
@@ -179,6 +182,10 @@ public class admin_dashboard implements ClickHandler{
         tablecontact = new CellTable<>();
         location = new ListBox();
         hpanel= new HorizontalPanel();
+        disclosurePanel=new DisclosurePanel("TEST", true);
+        hpanel2=new HorizontalPanel();
+        verticalPanel2=new VerticalPanel();
+        logout=new Hyperlink();
 
     }
 
@@ -190,15 +197,17 @@ public class admin_dashboard implements ClickHandler{
         search.addClickHandler(this);
         adddriver.addClickHandler(this);
         addDustbin.addClickHandler(this);
+        logout.setHTML("LogOut");
+        logout.setTargetHistoryToken("page1");
         //Home.addStyleName("labelhome_Stats_contact");
         //Contact.addStyleName("labelhome_Stats_contact");
         decoratorPanel.setWidth("1200");
         decoratorPanel.setHeight("200");
         decoratorPanel1.setWidth("1200");
         decoratorPanel1.setHeight("200");
-        hpanel.add(search);
-        hpanel.add(location);
-        verticalPanel.add(hpanel);
+        verticalPanel.add(location);
+        verticalPanel.add(search);
+        //hpanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
         decoratorPanel.add(verticalPanel);
         decoratorPanel1.add(verticalPanel1);
         //maps.setHref("MAPS.html");
@@ -234,21 +243,28 @@ public class admin_dashboard implements ClickHandler{
             }
         });
 
-        verticalPanel.add(maps);
-        verticalPanel.add(adddriver);
-        verticalPanel.add(addDustbin);
+        //verticalPanel.add(maps);
+        verticalPanel2.add(adddriver);
+        verticalPanel2.add(addDustbin);
+        verticalPanel2.add(maps);
+        verticalPanel2.add(logout);
+        disclosurePanel.add(verticalPanel2);
+        disclosurePanel.setAnimationEnabled(true);
+        disclosurePanel.ensureDebugId("cwDisclosurePanel");
+       // verticalPanel.add(adddriver);
+        //verticalPanel.add(addDustbin);
         tp.selectTab(0);
         tp.setWidth("1200");
         tp.setHeight("100");
+        hpanel2.add(disclosurePanel);
+        hpanel2.add(tp);
 
     }
 
     public void onModuleLoad() {
         addingpaneldashboard();
         connectionEstd();
-
-
-        RootPanel.get().add(tp);
+        RootPanel.get().add(hpanel2);
     }
 
     public void connectionEstd() {
