@@ -10,7 +10,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$AuthenticationHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$AuthenticationHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$User1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home$User1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AdminContact.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AdminContact.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/MAPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/MAPS.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +63,41 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -313,7 +378,8 @@
       <workItem from="1577867675472" duration="4048000" />
       <workItem from="1577889016066" duration="2283000" />
       <workItem from="1577977247320" duration="3507000" />
-      <workItem from="1578042045508" duration="230000" />
+      <workItem from="1578042045508" duration="9314000" />
+      <workItem from="1578060396666" duration="1508000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -406,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578042190127</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="DISCLOSURE PANEL">
+      <created>1578042288561</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578042288561</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">

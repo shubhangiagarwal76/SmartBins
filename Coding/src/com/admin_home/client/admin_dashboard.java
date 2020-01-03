@@ -1,19 +1,12 @@
 package com.admin_home.client;
 
-import com.admin_home.server.Postgreconnection;
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
-import com.google.gwt.core.client.Callback;
-import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.core.client.ScriptInjector;
-import com.google.gwt.dom.client.ScriptElement;
-import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
@@ -24,26 +17,10 @@ import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
-//import com.google.gwt.maps.client.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
-
-import com.admin_home.server.Postgreconnection;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.TextArea;
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.datepicker.client.DatePicker;
-//import com.sun.javafx.webkit.prism.WCTextRunImpl;
-
-//import sun.font.Decoration;
-//import com.admin_home.server.demo;
-/**
- * Entry point classes define <code>onModuleLoad()</code>
- */
 
 public class admin_dashboard implements ClickHandler{
     private DBConnectionAsync rpc;
@@ -161,7 +138,7 @@ public class admin_dashboard implements ClickHandler{
 
     }
 
-
+    //Constructor
     public admin_dashboard() {
 
         adddriver=new Button("ADD DRIVER");
@@ -182,33 +159,24 @@ public class admin_dashboard implements ClickHandler{
         tablecontact = new CellTable<>();
         location = new ListBox();
         hpanel= new HorizontalPanel();
-        disclosurePanel=new DisclosurePanel("TEST", true);
+        disclosurePanel=new DisclosurePanel("OPTIONS", true);
         hpanel2=new HorizontalPanel();
         verticalPanel2=new VerticalPanel();
         logout=new Hyperlink();
 
     }
 
+    //getter of phone
     public static String getPhone() {
         return phone;}
 
+    //adding to panel
     public void addingpaneldashboard(){
-        tp.setStyleName("tabStyle");
-        search.setStyleName("gwt-searchbutton");
-        search.addStyleName("gwt-searchbutton span");
-        search.addClickHandler(this);
         adddriver.addClickHandler(this);
         addDustbin.addClickHandler(this);
+        search.addClickHandler(this);
         logout.setHTML("LogOut");
         logout.setTargetHistoryToken("page1");
-        //Home.addStyleName("labelhome_Stats_contact");
-        //Contact.addStyleName("labelhome_Stats_contact");
-        addDustbin.setStyleName("gwt-searchbutton");
-        adddriver.setStyleName("gwt-searchbutton");
-        Home.addStyleName("labelhome_Stats_contact");
-        Contact.addStyleName("labelhome_Stats_contact");
-        location.setStyleName("locationStyle");
-        decoratorPanel.setWidth("1200");
         decoratorPanel.setHeight("200");
         decoratorPanel1.setWidth("1200");
         decoratorPanel1.setHeight("200");
@@ -234,7 +202,6 @@ public class admin_dashboard implements ClickHandler{
         History.addValueChangeHandler(new ValueChangeHandler<String>() {
             public void onValueChange(ValueChangeEvent<String> event) {
                 String historyToken = event.getValue();
-                //Window.alert(historyToken);
                 try {
                     if (historyToken.substring(0, 4).equals("page")) {
                         String tabIndexToken = historyToken.substring(4, 5);
@@ -250,31 +217,37 @@ public class admin_dashboard implements ClickHandler{
                 }
             }
         });
-
-        //verticalPanel.add(maps);
         verticalPanel2.add(adddriver);
         verticalPanel2.add(addDustbin);
         verticalPanel2.add(maps);
         verticalPanel2.add(logout);
         disclosurePanel.add(verticalPanel2);
         disclosurePanel.setAnimationEnabled(true);
-        disclosurePanel.ensureDebugId("cwDisclosurePanel");
-       // verticalPanel.add(adddriver);
-        //verticalPanel.add(addDustbin);
         tp.selectTab(0);
         tp.setWidth("1200");
         tp.setHeight("100");
         hpanel2.add(disclosurePanel);
+        decoratorPanel.setWidth("1200");
         hpanel2.add(tp);
 
+        addDustbin.setStyleName("gwt-searchbutton");
+        adddriver.setStyleName("gwt-searchbutton");
+        Home.addStyleName("labelhome_Stats_contact");
+        tp.setStyleName("tabStyle");
+        search.setStyleName("gwt-searchbutton");
+        search.addStyleName("gwt-searchbutton span");
+        Contact.addStyleName("labelhome_Stats_contact");
+        location.setStyleName("locationStyle");
     }
 
+    //ON module load
     public void onModuleLoad() {
         addingpaneldashboard();
         connectionEstd();
         RootPanel.get().add(hpanel2);
     }
 
+    //RPC Connection
     public void connectionEstd() {
         rpc = (DBConnectionAsync) GWT.create(DBConnection.class);
         ServiceDefTarget target = (ServiceDefTarget) rpc;
@@ -288,6 +261,7 @@ public class admin_dashboard implements ClickHandler{
         fillContactList();
     }
 
+    //FILL HOME TAB
     public void fillHomeList() {
 
         table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
@@ -358,6 +332,7 @@ public class admin_dashboard implements ClickHandler{
 
     }
 
+    //FILL CONTACT TAB
     public void fillContactList() {
         AsyncCallback<ArrayList<Contact>> callback = new AuthenticationHandlers<ArrayList<Contact>>();
         rpc.authenticateContact(Admin_home.getUname(), callback);
@@ -411,6 +386,7 @@ public class admin_dashboard implements ClickHandler{
         rpc.authenticateDetails(Admin_home.getUname(), location.getSelectedItemText(), callback1);
     }
 
+    //EVENT HANDLER
     public void onClick(ClickEvent event) {
 
         Widget sender = (Widget) event.getSource();
@@ -457,6 +433,7 @@ public class admin_dashboard implements ClickHandler{
         }
     }
 
+    //RPC SUCCESSFUL FOR HOME LIST
     private class AuthenticationHandler<T> implements AsyncCallback<ArrayList<Details>> {
 
         public void onFailure(Throwable ex) {
@@ -479,11 +456,11 @@ public class admin_dashboard implements ClickHandler{
                 ADMIN.add(new Admin(d, l, s, f, ln, mn, n));
             }
             table.setRowData(ADMIN);
-            RootPanel.get().add(new HTML("RPC successful"));
         }
 
     }
 
+    //RPC SUCCESSFUL FOR CONTACT LIST
     private class AuthenticationHandlers<T> implements AsyncCallback<ArrayList<Contact>>{
 
         public void onFailure(Throwable ex) {
@@ -505,11 +482,12 @@ public class admin_dashboard implements ClickHandler{
                 ADMINCONTACT.add(new AdminContact(dc, lc, fc, lnc,dc1));
             }
             tablecontact.setRowData(ADMINCONTACT);
-            RootPanel.get().add(new HTML("RPC successful"));
+
         }
 
     }
 
+    //RPC SUCCESSFUL FOR LOCATION DROPDOWN
     private class locationList<T> implements AsyncCallback<ArrayList<Location>> {
 
 
@@ -531,6 +509,7 @@ public class admin_dashboard implements ClickHandler{
         }
     }
 
+    //SEND MESSAGE CLASS
     private class sendsms<T> implements AsyncCallback<String>{
 
 
