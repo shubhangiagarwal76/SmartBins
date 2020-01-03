@@ -10,9 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -315,6 +313,7 @@
       <workItem from="1577867675472" duration="4048000" />
       <workItem from="1577889016066" duration="2283000" />
       <workItem from="1577977247320" duration="3507000" />
+      <workItem from="1578042045508" duration="230000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -400,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577890496362</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="DISCLOSURE PANEL">
+      <created>1578042190127</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578042190127</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -464,6 +470,7 @@
     <MESSAGE value="MAP WORK + HISTORY WORK PENDING" />
     <MESSAGE value="PULLING CSS WORK" />
     <MESSAGE value="&quot;ADD DRIVER&quot; CLIENT SIDE VERIFICATION DONE" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;ADD DRIVER&quot; CLIENT SIDE VERIFICATION DONE" />
+    <MESSAGE value="DISCLOSURE PANEL" />
+    <option name="LAST_COMMIT_MESSAGE" value="DISCLOSURE PANEL" />
   </component>
 </project>
