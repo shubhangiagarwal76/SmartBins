@@ -74,7 +74,7 @@ import jsinterop.annotations.JsType;
 //
 //}
 public class Admin_home  implements EntryPoint, ClickHandler{
-    VerticalPanel vpanel;
+    VerticalPanel vpanel_login;
     HorizontalPanel hpanel;
     Button login;
     static TextBox uname;
@@ -89,7 +89,7 @@ public class Admin_home  implements EntryPoint, ClickHandler{
         this.uname = new TextBox();
         this.forget = new Anchor();
         this.pwd = new PasswordTextBox();
-        this.vpanel = new VerticalPanel();
+        this.vpanel_login = new VerticalPanel();
         this.hpanel = new HorizontalPanel();
         this.login = new Button("LOGIN");
         login.addClickHandler(this::onClick);
@@ -240,7 +240,7 @@ public class Admin_home  implements EntryPoint, ClickHandler{
             n.setN (result.getValue());
             if(n.getN()==1) {
                 RootPanel.get().clear();
-                vpanel.clear();
+                vpanel_login.clear();
                 System.out.println("VALUE OF N"+n.getN());
                 admin_dashboard ad = new admin_dashboard();
                 ad.onModuleLoad();
@@ -280,25 +280,24 @@ public class Admin_home  implements EntryPoint, ClickHandler{
         }-*//*;*/
     public void addingpanel(){
         login.getElement().getStyle().setBackgroundImage("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjShIDEiO3lAhVJyDgGHVf1B4IQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.flaticon.com%252Ffree-icon%252Flogin-button_16036%26psig%3DAOvVaw3VMXObzc2NQ36Ce1hK2QXF%26ust%3D1573936504671488&psig=AOvVaw3VMXObzc2NQ36Ce1hK2QXF&ust=1573936504671488");
-        vpanel.add(uname);
+        vpanel_login.add(uname);
         uname.setName("UserName");
-        vpanel.add(pwd);
+        vpanel_login.add(pwd);
         pwd.setName("Password");
         hpanel.add(login);
         hpanel.add(forget);
-        vpanel.add(hpanel);
-        //vpanel.add(test);
+        vpanel_login.add(hpanel);
         hpanel.setSpacing(10);
-       // vpanel.setStyleName("Vertical");
+        vpanel_login.setStyleName("Vertical");
         forget.setHref("LOGIN.html");
         forget.setText("Forget Password?");
         forget.setSize("2","2");
-        vpanel.setBorderWidth(3);
+        vpanel_login.setBorderWidth(3);
 
     }
     public void onModuleLoad() {
         addingpanel();
-        RootPanel.get().add(vpanel);
+        RootPanel.get().add(vpanel_login);
 //        HorizontalPanel horizontalPanel = new HorizontalPanel();
 //        horizontalPanel.setHeight("400px");
 //        horizontalPanel.setWidth("600px");

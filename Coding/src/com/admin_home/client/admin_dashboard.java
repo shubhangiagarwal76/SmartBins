@@ -37,7 +37,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.gwt.user.datepicker.client.DatePicker;
-import com.sun.javafx.webkit.prism.WCTextRunImpl;
+//import com.sun.javafx.webkit.prism.WCTextRunImpl;
 
 //import sun.font.Decoration;
 //import com.admin_home.server.demo;
@@ -193,7 +193,9 @@ public class admin_dashboard implements ClickHandler{
         return phone;}
 
     public void addingpaneldashboard(){
-        //search.addStyleName("gwt-searchbutton");
+        tp.setStyleName("tabStyle");
+        search.setStyleName("gwt-searchbutton");
+        search.addStyleName("gwt-searchbutton span");
         search.addClickHandler(this);
         adddriver.addClickHandler(this);
         addDustbin.addClickHandler(this);
@@ -201,6 +203,11 @@ public class admin_dashboard implements ClickHandler{
         logout.setTargetHistoryToken("page1");
         //Home.addStyleName("labelhome_Stats_contact");
         //Contact.addStyleName("labelhome_Stats_contact");
+        addDustbin.setStyleName("gwt-searchbutton");
+        adddriver.setStyleName("gwt-searchbutton");
+        Home.addStyleName("labelhome_Stats_contact");
+        Contact.addStyleName("labelhome_Stats_contact");
+        location.setStyleName("locationStyle");
         decoratorPanel.setWidth("1200");
         decoratorPanel.setHeight("200");
         decoratorPanel1.setWidth("1200");
@@ -213,6 +220,7 @@ public class admin_dashboard implements ClickHandler{
         //maps.setHref("MAPS.html");
         tp.add(decoratorPanel,Home);
         tp.add(decoratorPanel1, Contact);
+        tp.setAnimationEnabled(true);
 
         //ON CHANGE OF TAB PANELS HISTORY ADDED
         tp.addSelectionHandler(new SelectionHandler<Integer>() {
