@@ -20,7 +20,23 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/servlet-api-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/annotations-api-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../postgresql-42.2.8.jar" />
-          <element id="file-copy" path="$USER_HOME$/Downloads/postgresql-42.2.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-dev.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-user.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-servlet.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-elemental.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-codeserver.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-api-checker.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-servlet-deps.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-apt.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-client.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-server.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-apt-src.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/validation-api-1.0.0.GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-client+src.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-client-src.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-server+src.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/requestfactory-server-src.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/validation-api-1.0.0.GA-sources.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Smart_Bins/web/Web" />
