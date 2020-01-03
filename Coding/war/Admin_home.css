@@ -10,21 +10,58 @@
 }
 
 /* Style the tab */
-.gwt-TabPanel {
-    overflow-y: visible;
-    overflow-x: visible;
-    border: 1px solid;
-    background-color:ghostwhite;
-    width: 1200px;
+.tabStyle {
+    background-color: darkslategray;
+
 }
 
 
-.gwt-searchbutton{
+
+.gwt-searchbutton {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: fit-content;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.gwt-searchbutton {
+    cursor: pointer;
+    display: inline-block;
     position: relative;
-    top: -21px;
-    right: -209px;
-    background:red;
-    cursor: pointer
+    transition: 0.5s;
+}
+
+.gwt-searchbutton :after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.gwt-searchbutton:hover {
+    padding-right: 25px;
+}
+
+.gwt-searchbutton:hover:after {
+    opacity: 1;
+    right: 0;
+}
+
+.locationStyle{
+    background-color: #f4511e;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
 }
 
 .icon{
@@ -38,14 +75,25 @@
 }
 .labelhome_Stats_contact
 {
-    white-space: revert;
+
+    background-color: darkslategrey;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
     cursor: pointer;
-    padding: 17px;
-    padding-right: 17px;
-    background: whitesmoke;
-    padding-right: 25px;
+    padding: 14px 16px ;
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+    width: fit-content;
 
 }
+.labelhome_Stats_contact:hover{
+
+    background-color: #777;
+
+}
+
 .Header{
     text-align: center;
     color: darkslateblue;
@@ -64,7 +112,7 @@
 }
 /* Style the buttons that are used to open the tab content */
 .gwt-TabLayoutPanelTabs {
-    background-color: black;
+    background-color: lightgreen;
     color: white;
     float: left;
     border: 10px solid;
@@ -120,7 +168,8 @@
     border-color: #939393;
 }
 
-.Vertical {
+.Vertical
+{
     border-color: royalblue;
     background-color: tan;
 
