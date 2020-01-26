@@ -227,9 +227,10 @@ public class admin_dashboard implements ClickHandler{
         tp.setWidth("1200");
         tp.setHeight("100");
         hpanel2.add(disclosurePanel);
+        verticalPanel2.setSpacing(10);
         decoratorPanel.setWidth("1200");
         hpanel2.add(tp);
-
+        disclosurePanel.setStyleName("disclose");
         addDustbin.setStyleName("gwt-searchbutton");
         adddriver.setStyleName("gwt-searchbutton");
         Home.addStyleName("labelhome_Stats_contact");
@@ -238,6 +239,8 @@ public class admin_dashboard implements ClickHandler{
         search.addStyleName("gwt-searchbutton span");
         Contact.addStyleName("labelhome_Stats_contact");
         location.setStyleName("locationStyle");
+        maps.setStyleName("hyper");
+        logout.setStyleName("hyper");
     }
 
     //ON module load

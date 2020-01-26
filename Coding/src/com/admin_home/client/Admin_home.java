@@ -10,6 +10,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 
 public class Admin_home  implements EntryPoint, ClickHandler{
+    FlowPanel flow;
     VerticalPanel vpanel_login;
     HorizontalPanel hpanel;
     Button login;
@@ -24,11 +25,11 @@ public class Admin_home  implements EntryPoint, ClickHandler{
         this.forget = new Anchor();
         this.pwd = new PasswordTextBox();
         this.vpanel_login = new VerticalPanel();
+        this.flow=new FlowPanel();
         this.hpanel = new HorizontalPanel();
         this.login = new Button("LOGIN");
         login.addClickHandler(this::onClick);
-        this.img = new Image("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjShIDEiO3lAhVJyDgGHVf1B4IQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.flaticon.com%252Ffree-icon%252Flogin-button_16036%26psig%3DAOvVaw3VMXObzc2NQ36Ce1hK2QXF%26ust%3D1573936504671488&psig=AOvVaw3VMXObzc2NQ36Ce1hK2QXF&ust=1573936504671488");
-
+        this.img = new Image();
            }
 
     //Event handled at login
@@ -125,12 +126,12 @@ public class Admin_home  implements EntryPoint, ClickHandler{
             }
             else if(n.getN()==0)
             {
-                Window.alert("Invalid Password");
+                Window.alert("Invalid Password "+result.getPassword());
                 System.out.println("VALUE OF N"+n.getN());
             }
             else if (n.getN()==-1)
             {
-                Window.alert("Invalid Username");
+                Window.alert("Invalid Username "+result.getUsername());
                 System.out.println("VALUE OF N"+n.getN());
             }
 
@@ -143,26 +144,39 @@ public class Admin_home  implements EntryPoint, ClickHandler{
     }
 
     public void addingpanel(){
-        login.getElement().getStyle().setBackgroundImage("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjShIDEiO3lAhVJyDgGHVf1B4IQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.flaticon.com%252Ffree-icon%252Flogin-button_16036%26psig%3DAOvVaw3VMXObzc2NQ36Ce1hK2QXF%26ust%3D1573936504671488&psig=AOvVaw3VMXObzc2NQ36Ce1hK2QXF&ust=1573936504671488");
+        vpanel_login.setWidth("500");
+        vpanel_login.setHeight("500");
+        hpanel.setWidth("500");
+        //login.getElement().getStyle().setBackgroundImage("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjShIDEiO3lAhVJyDgGHVf1B4IQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.flaticon.com%252Ffree-icon%252Flogin-button_16036%26psig%3DAOvVaw3VMXObzc2NQ36Ce1hK2QXF%26ust%3D1573936504671488&psig=AOvVaw3VMXObzc2NQ36Ce1hK2QXF&ust=1573936504671488");
         vpanel_login.add(uname);
         uname.setName("UserName");
+        uname.setSize("300","300");
+        pwd.setSize("300","300");
         vpanel_login.add(pwd);
         pwd.setName("Password");
         hpanel.add(login);
         hpanel.add(forget);
-        vpanel_login.add(hpanel);
+       // vpanel_login.add(hpanel);
         hpanel.setSpacing(10);
-        vpanel_login.setStyleName("Vertical");
+        vpanel_login.setSpacing(10);
+        uname.setStyleName("textbox");
+        pwd.setStyleName("textbox");
         forget.setHref("LOGIN.html");
         forget.setText("Forget Password?");
         forget.setSize("2","2");
-        vpanel_login.setBorderWidth(3);
-
+        uname.getElement().setPropertyString("placeholder", "USERID");
+        pwd.getElement().setPropertyString("placeholder", "PASSWORD");
+        flow.add(vpanel_login);
+        flow.add(hpanel);
+        flow.setStyleName("Vertical");
+        login.setStyleName("gwt-searchbutton");
+        forget.setStyleName("hyper");
+        flow.setWidth("350");
     }
 
     public void onModuleLoad() {
         addingpanel();
-        RootPanel.get().add(vpanel_login);
+        RootPanel.get().add(flow);
 
     }
 }
