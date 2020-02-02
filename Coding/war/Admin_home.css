@@ -1,8 +1,8 @@
 .body, .td, .a, .div, .p {
     font-family: arial;
     background-color: royalblue;
-
 }
+
 .td{
     vertical-align: top;
     padding-bottom: 19px;
@@ -14,8 +14,28 @@
     background-color: darkslategray;
 
 }
+.disclose{
+    background-color: #a0a0a0;
+}
 
+.textbox{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/resources/user_access-512.png');
+    background-position: 1px 1px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.textbox:focus{
+    width: 100%;
 
+}
 
 .gwt-searchbutton {
     border-radius: 4px;
@@ -71,7 +91,7 @@
 
     height: 63px;
 
-    top: -104px;
+    top: -100px;
 }
 .labelhome_Stats_contact
 {
@@ -144,6 +164,17 @@
     border: 1px solid ;
     border-top: none;
 }
+.hyper:link, hyper:visited {
+    background-color:#f4511e;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+
 .gwt-Button {
     align-items:center;
     color:brown;
@@ -168,9 +199,9 @@
     border-color: #939393;
 }
 
+
 .Vertical
 {
-    border-color: royalblue;
-    background-color: tan;
-
+    background-color: darkslategrey;
+    position: absolute;
 }

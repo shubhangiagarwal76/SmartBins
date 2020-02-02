@@ -275,5 +275,3 @@ public class AddDriver extends DialogBox implements ClickHandler {
 
     }
 }
-
-

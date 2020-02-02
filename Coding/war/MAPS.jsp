@@ -24,12 +24,26 @@
     <meta charset="UTF-8">
     <title>Maps On Click</title>
 
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    </style>
 
 </head>
 <body>
+<h1>GOOGLE MAP</h1>
 <% String Pass = null;
     long l;
     long var= 0;
@@ -42,10 +56,7 @@
     try{
 
         var  = Long.parseLong(request.getParameter("id"));
-
-
-        Out.println(var);
-
+        //Out.println(var);
         Connection con = null;
         Class.forName("org.postgresql.Driver");
         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
@@ -55,70 +66,47 @@
         int i=0;
         while (rs.next())
         {
-            //Pass = rs.getString("Password");
+            /*Pass = rs.getString("Password");
             Out.println(rs.getString("F_Name"));
             Out.println(rs.getDouble("Status"));
             lat.add(rs.getDouble("Latitude_Coordinates"));
             log.add(rs.getDouble("Longitude_Coordinates"));
             lata[i]=rs.getDouble("Latitude_Coordinates");
             loga[i]=rs.getDouble("Longitude_Coordinates");
-            i++;
+            i++;*/
         }
     } catch (SQLException ex) {
         System.out.println(ex);
     }%>
 
-
-
-
-<div id='map' style='width: 1200px; height: 1200px;'></div>
-
-<script>
-<%--    <% String te="Dustbin";%>--%>
-var lat='<%= lata[0] %>'
-var log='<%= loga[0] %>'
-
-    // alert (c);
-<% double cord = 77.362423; %>
-var cor = "<%= cord %>"
-</script>
-
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbmt1ciIsImEiOiJjazBlZW9tZDkwMDhjM3B1ZzJtdWgwY2lzIn0.JYo2k03E6aW3f4UYp0Feww';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-v9',
-        center: [77.362423,28.619753],
-        zoom:15
-    });
-    map.on('load', function() {
-        map.loadImage('resources\\trash_can-512.png', function(error, image) {
-            if (error) throw error;
-            map.addImage('dustbin', image);
-            map.addLayer({
-                "id": "points",
-                "type": "symbol",
-                "source": {
-                    "type": "geojson",
-                    "data": {
-                        "type": "FeatureCollection",
-                        "features": [{
-                            "type": "Feature",
-                            "geometry": {
-                                "type": "Point",
-                                "coordinates":[cor,28.619753]
-                            }
-
-                        }]
-                    }
-                },
-                "layout": {
-                    "icon-image": "dustbin",
-                    "icon-size": 0.10
-                }
-            });
+<div id="map"></div>
+<script>var map;
+function initMap() {
+    var uluru1 = {lat: 28.619863, lng: 77.361824};
+    var uluru2 = {lat: 28.619869, lng: 77.362557};
+    var uluru3 = {lat: 28.619860, lng: 77.362048};
+    var uluru4 = {lat: 28.619619, lng: 77.362522};
+    var uluru5 = {lat: 28.619619, lng: 77.362068};
+    var uluru6 = {lat: 28.618595, lng: 77.362472};
+    var uluru7 = {lat: 28.619648, lng: 77.361820};
+    map = new google.maps.Map(document.getElementById('map'),
+        {
+            center: {lat: 28.619863, lng: 77.361824},
+            zoom: 18,
+            mapTypeId: 'satellite'
         });
-    });
+    var marker = new google.maps.Marker({position: uluru1, map: map});
+    var marker = new google.maps.Marker({position: uluru2, map: map});
+    var marker = new google.maps.Marker({position: uluru3, map: map});
+    var marker = new google.maps.Marker({position: uluru4, map: map});
+    var marker = new google.maps.Marker({position: uluru5, map: map});
+    var marker = new google.maps.Marker({position: uluru6, map: map});
+    var marker = new google.maps.Marker({position: uluru7, map: map});
+    var marker = new google.maps.Marker({position: uluru8, map: map});
+}
 </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6NTzmJDphM56mmRW3Vr8EVJFVMFOkuZg&callback=initMap"
+        async defer></script>
 </body>
 </html>
