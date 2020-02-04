@@ -10,7 +10,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDustbin$insertDustbin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDustbin$insertDustbin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDustbin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDustbin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/Admin_home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$AuthenticationHandlers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$sendsms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDustbin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDustbin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/Admin_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/admin_dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/Admin_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/Admin_home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/LOGIN.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/LOGIN.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/LOGIN.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/LOGIN.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/MAPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/MAPS.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/resources/trash_can-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/war/resources/trash_can-512.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +172,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/postgresql-42.2.8.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -138,7 +186,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -210,7 +258,6 @@
     </configuration>
     <configuration name="Admin_home" type="GWT.ConfigurationType" factoryName="GWT Configuration">
       <option name="RUN_PAGE" value="Admin_home.html" />
-      <option name="BROWSER" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATE_RESOURCES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="USE_SUPER_DEV_MODE" value="true" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -716,6 +763,8 @@
       <workItem from="1577687537156" duration="15091000" />
       <workItem from="1577805783175" duration="1508000" />
       <workItem from="1578040106363" duration="315000" />
+      <workItem from="1580703184946" duration="7050000" />
+      <workItem from="1580739693486" duration="11830000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -780,7 +829,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577693908703</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="COMMIT BEFORE CSS PULL">
+      <created>1580657394131</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580657394131</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,6 +889,7 @@
     <MESSAGE value="ADD DRIVER AND DUSTBIN WITH NO REDUNDANCY WITHOUT CLIENT SIDE VERIFICATION" />
     <MESSAGE value="HISTORY TOKEN ADDED" />
     <MESSAGE value="HISTORY TOKEN AND CLUSTER MAP" />
-    <option name="LAST_COMMIT_MESSAGE" value="HISTORY TOKEN AND CLUSTER MAP" />
+    <MESSAGE value="COMMIT BEFORE CSS PULL" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMIT BEFORE CSS PULL" />
   </component>
 </project>

@@ -13,6 +13,7 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.gwt.user.datepicker.client.DatePicker;
+//import com.sun.org.apache.xerces.internal.impl.xs.models.XSCMRepeatingLeaf;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -54,11 +55,12 @@ public class AddDriver extends DialogBox implements ClickHandler {
     }
 
     VerticalPanel vpanel;
+    ScrollPanel scrollPanel;
     TextBox fname, lname, mobileno, aadhar, email;
-    TextArea address;
+
     RadioButton male, female, other;
     Button submit;
-    Label flname, llname, lmobileno, laadhar, lemail, ldob, laddress, lgender, llocation;
+    Label flname, llname, lmobileno, laadhar, lemail, ldob,  lgender, llocation;
     private DBConnectionAsync rpc;
     //static Date d;
     DateBox dateBox;
@@ -69,6 +71,7 @@ public class AddDriver extends DialogBox implements ClickHandler {
 
     AddDriver() {
         vpanel = new VerticalPanel();
+        scrollPanel = new ScrollPanel(vpanel);
         fname = new TextBox();
         lname = new TextBox();
         mobileno = new TextBox();
@@ -81,9 +84,9 @@ public class AddDriver extends DialogBox implements ClickHandler {
         laadhar = new Label("AADHAR No.");
         lemail = new Label("EMAIL ADDRESS");
         ldob = new Label("DATE OF BIRTH");
-        laddress = new Label("CORRESPONDING ADDRESS");
+
         lgender = new Label("GENDER");
-        address = new TextArea();
+
         submit = new Button("SUBMIT");
         submit.addClickHandler(this);
         location = new ListBox();
@@ -91,13 +94,15 @@ public class AddDriver extends DialogBox implements ClickHandler {
         male = new RadioButton("radiogroup", "MALE");
         female = new RadioButton("radiogroup", "FEMALE");
         other = new RadioButton("radiogroup", "OTHER");
+        setGlassEnabled(true);
         setAnimationEnabled(true);
         setText("ADD A DRIVER");
+
         setAutoHideEnabled(true);
-        setPopupPosition(800, 100);
+
         connectionEstd();
         add_to_dialog();
-        setWidget(vpanel);
+        setWidget(scrollPanel);
 
     }
 
@@ -129,18 +134,40 @@ public class AddDriver extends DialogBox implements ClickHandler {
         vpanel.add(male);
         vpanel.add(female);
         vpanel.add(other);
-        vpanel.add(laddress);
-        vpanel.add(address);
+
+
         vpanel.add(llocation);
         vpanel.add(location);
 
         vpanel.add(submit);
+       // scrollPanel.add(vpanel);
+
+        submit.setStyleName("gwt-searchbutton");
+        location.setStyleName("locationStyle");
+        fname.setStyleName("textbox");
+        lname.setStyleName("textbox");
+        mobileno.setStyleName("textbox");
+        aadhar.setStyleName("textbox");
+        email.setStyleName("textbox");
+
+
+        flname.setStyleName("label");
+        llname.setStyleName("label");
+        llocation.setStyleName("label");
+        lmobileno.setStyleName("label");
+        laadhar.setStyleName("label");
+        ldob.setStyleName("label");
+        lemail.setStyleName("label");
+        lgender.setStyleName("label");
+        this.setStyleName("dialog");
+
     }
 
     public void datedisplay() {
 
         DatePicker datePicker = new DatePicker();
         final Label text = new Label();
+
         // Set the value in the text box when the user selects a date
         datePicker.addValueChangeHandler(new MyDateValueChangeHandler(text));
 
@@ -154,7 +181,8 @@ public class AddDriver extends DialogBox implements ClickHandler {
         advancedDatePicker.setVisibleYearCount(51);
 
         final Label text2 = new Label();
-        text2.getElement().getStyle().setMarginTop(15, Style.Unit.PX);
+        text2.setStyleName("textbox");
+        //text2.getElement().getStyle().setMarginTop(15, Style.Unit.PX);
 
         // Set the value in the text box when the user selects a date
         advancedDatePicker.addValueChangeHandler(new MyDateValueChangeHandler(text2));
@@ -224,7 +252,7 @@ public class AddDriver extends DialogBox implements ClickHandler {
         else
         {
             AsyncCallback<Driver> callback5 = new insertDriver<Driver>();
-            rpc.insertInfo(fname.getText(), lname.getText(), Long.parseLong(mobileno.getText()), Long.parseLong(aadhar.getText()), dateBox.getValue(), email.getText(), genderselected(), address.getText(), Admin_home.getUname(), location.getSelectedItemText(), callback5);
+            rpc.insertInfo(fname.getText(), lname.getText(), Long.parseLong(mobileno.getText()), Long.parseLong(aadhar.getText()), dateBox.getValue(), email.getText(), genderselected(), Admin_home.getUname(), location.getSelectedItemText(), callback5);
             AddDriver.this.hide();
         }
     }

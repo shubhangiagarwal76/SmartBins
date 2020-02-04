@@ -171,6 +171,7 @@ public class Admin_home  implements EntryPoint, ClickHandler{
         flow.setStyleName("Vertical");
         login.setStyleName("gwt-searchbutton");
         forget.setStyleName("hyper");
+        RootPanel.get().setStyleName("root");
         flow.setWidth("350");
     }
 

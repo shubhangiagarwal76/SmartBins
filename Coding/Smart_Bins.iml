@@ -5,7 +5,7 @@
       <configuration>
         <setting name="compilerMaxHeapSize" value="1024" />
         <setting name="gwtScriptOutputStyle" value="DETAILED" />
-        <setting name="gwtSdkUrl" value="file://$MODULE_DIR$/../../gwt-2.8.2" />
+        <setting name="gwtSdkUrl" value="file://$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2" />
         <setting name="webFacet" value="Web" />
       </configuration>
     </facet>
@@ -32,21 +32,10 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Project related/postgresql-42.2.8.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/postgresql-42.2.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Project related/gwt-maps-api-3.9.0-build-16.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../Project related/gwt-maps-api-3.9.0-build-16.jar!/" />
-        </SOURCES>
       </library>
     </orderEntry>
   </component>

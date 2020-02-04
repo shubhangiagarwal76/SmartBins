@@ -43,7 +43,7 @@ public class admin_dashboard implements ClickHandler{
     Timer refresh;
     Button adddriver, addDustbin;
     DisclosurePanel disclosurePanel;
-    Hyperlink logout;
+    Button logout;
 
 
     //INNER ADMIN CLASS FOR HOME LIST
@@ -154,15 +154,15 @@ public class admin_dashboard implements ClickHandler{
         decoratorPanel1 = new DecoratorPanel();
         tp = new TabPanel();
         Contact=new Label("Contact");
-        table = new CellTable<>();
+        table = new CellTable<Admin>();
         buttonCell = new ButtonCell();
-        tablecontact = new CellTable<>();
+        tablecontact = new CellTable<AdminContact>();
         location = new ListBox();
         hpanel= new HorizontalPanel();
         disclosurePanel=new DisclosurePanel("OPTIONS", true);
         hpanel2=new HorizontalPanel();
         verticalPanel2=new VerticalPanel();
-        logout=new Hyperlink();
+        logout=new Button("Logout");
 
     }
 
@@ -175,19 +175,16 @@ public class admin_dashboard implements ClickHandler{
         adddriver.addClickHandler(this);
         addDustbin.addClickHandler(this);
         search.addClickHandler(this);
-        logout.setHTML("LogOut");
-        logout.setTargetHistoryToken("page1");
-        decoratorPanel.setHeight("200");
-        decoratorPanel1.setWidth("1200");
-        decoratorPanel1.setHeight("200");
-        verticalPanel.add(location);
-        verticalPanel.add(search);
-        //hpanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-        decoratorPanel.add(verticalPanel);
-        decoratorPanel1.add(verticalPanel1);
-        //maps.setHref("MAPS.html");
-        tp.add(decoratorPanel,Home);
-        tp.add(decoratorPanel1, Contact);
+        logout.addClickHandler(this);
+        //logout.setHTML("LogOut");
+       // logout.setTargetHistoryToken("page0");
+        hpanel.add(location);
+        hpanel.add(search);
+
+        verticalPanel.add(hpanel);
+
+        tp.add(verticalPanel,Home);
+        tp.add(verticalPanel1, Contact);
         tp.setAnimationEnabled(true);
 
         //ON CHANGE OF TAB PANELS HISTORY ADDED
@@ -197,6 +194,8 @@ public class admin_dashboard implements ClickHandler{
                 History.newItem("page"+event.getSelectedItem());
             }
         });
+
+
 
         //INVOCATION OF HISTORY ON TABS ONLY
         History.addValueChangeHandler(new ValueChangeHandler<String>() {
@@ -224,12 +223,12 @@ public class admin_dashboard implements ClickHandler{
         disclosurePanel.add(verticalPanel2);
         disclosurePanel.setAnimationEnabled(true);
         tp.selectTab(0);
-        tp.setWidth("1200");
-        tp.setHeight("100");
         hpanel2.add(disclosurePanel);
         verticalPanel2.setSpacing(10);
-        decoratorPanel.setWidth("1200");
+
         hpanel2.add(tp);
+
+        hpanel.setSpacing(10);
         disclosurePanel.setStyleName("disclose");
         addDustbin.setStyleName("gwt-searchbutton");
         adddriver.setStyleName("gwt-searchbutton");
@@ -240,7 +239,12 @@ public class admin_dashboard implements ClickHandler{
         Contact.addStyleName("labelhome_Stats_contact");
         location.setStyleName("locationStyle");
         maps.setStyleName("hyper");
-        logout.setStyleName("hyper");
+        logout.setStyleName("gwt-searchbutton");
+        table.setStyleName("admin_table");
+        tablecontact.setStyleName("admin_table");
+        RootPanel.get().setStyleName("root");
+        hpanel2.setStyleName("hpanel");
+        hpanel.setStyleName("searchpanel");
     }
 
     //ON module load
@@ -259,7 +263,7 @@ public class admin_dashboard implements ClickHandler{
 
         AsyncCallback<ArrayList<Location>> callback2 = new locationList<ArrayList<Location>>();
         rpc.locationList(Admin_home.getUname(), callback2);
-        verticalPanel.add(location);
+        hpanel.add(location);
         fillHomeList();
         fillContactList();
     }
@@ -423,7 +427,7 @@ public class admin_dashboard implements ClickHandler{
             int left = Window.getClientWidth()/ 2;
             int top = Window.getClientHeight()/ 2;
             add1.setPopupPosition(left, top);
-            add1.show();
+            add1.center();
         }
         if(sender.equals(addDustbin)){
 
@@ -431,8 +435,14 @@ public class admin_dashboard implements ClickHandler{
             int left = Window.getClientWidth()/ 2;
             int top = Window.getClientHeight()/ 2;
             ad.setPopupPosition(left, top);
-            ad.show();
+            ad.center();
 
+        }
+
+        if(sender.equals(logout))
+        {
+
+            Window.Location.reload();
         }
     }
 

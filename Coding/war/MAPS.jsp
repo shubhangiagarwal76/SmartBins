@@ -89,20 +89,21 @@ function initMap() {
     var uluru5 = {lat: 28.619619, lng: 77.362068};
     var uluru6 = {lat: 28.618595, lng: 77.362472};
     var uluru7 = {lat: 28.619648, lng: 77.361820};
+    var pic = '/resources/trash_can-512.png';
     map = new google.maps.Map(document.getElementById('map'),
         {
             center: {lat: 28.619863, lng: 77.361824},
             zoom: 18,
             mapTypeId: 'satellite'
         });
-    var marker = new google.maps.Marker({position: uluru1, map: map});
-    var marker = new google.maps.Marker({position: uluru2, map: map});
-    var marker = new google.maps.Marker({position: uluru3, map: map});
-    var marker = new google.maps.Marker({position: uluru4, map: map});
-    var marker = new google.maps.Marker({position: uluru5, map: map});
-    var marker = new google.maps.Marker({position: uluru6, map: map});
-    var marker = new google.maps.Marker({position: uluru7, map: map});
-    var marker = new google.maps.Marker({position: uluru8, map: map});
+    var marker = new google.maps.Marker({position: uluru1, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru2, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru3,icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru4, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru5, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru6, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru7, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru8, icon: pic, map: map});
 }
 </script>
 

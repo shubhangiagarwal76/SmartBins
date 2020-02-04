@@ -25,10 +25,11 @@ public class AddDustbin extends DialogBox implements ClickHandler {
         register.addClickHandler(this);
         connectionEstd();
         add_to_dialog1();
+        setGlassEnabled(true);
         setAnimationEnabled(true);
         setText("ADD A DUSTBIN");
         setAutoHideEnabled(true);
-        setPopupPosition(800, 100);
+
         setWidget(vpanel);
     }
     void add_to_dialog1() {
@@ -37,6 +38,12 @@ public class AddDustbin extends DialogBox implements ClickHandler {
         vpanel.add(lcap);
         vpanel.add(cap);
         vpanel.add(register);
+        this.setStyleName("dialog");
+        ldid.setStyleName("label");
+        drid.setStyleName("textbox");
+        lcap.setStyleName("label");
+        cap.setStyleName("textbox");
+        register.setStyleName("gwt-searchbutton");
 
     }
     public void connectionEstd() {

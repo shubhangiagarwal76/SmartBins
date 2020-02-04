@@ -39,6 +39,8 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/validation-api-1.0.0.GA-sources.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../Project related/postgresql-42.2.8.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../Project related/gwt-maps-api-3.9.0-build-16.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/postgresql-42.2.8.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2/gwt-servlet.jar" />
         </element>
       </element>
       <element id="gwt-compiler-output" facet="Smart_Bins/gwt/GWT" />
