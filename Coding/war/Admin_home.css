@@ -134,7 +134,7 @@ color: white;
 .icon{
     position: relative;
 
-    left: 377px;
+    left: 330px;
 
     height: 70px;
 
@@ -258,7 +258,7 @@ color: white;
 {
     background-color: darkslategrey;
     position: fixed;
-    bottom: 40%;
+    bottom: 20%;
     left: 40%;
 
 }

@@ -222,7 +222,7 @@ public class AddDriver extends DialogBox implements ClickHandler {
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
 
-        if(f.matches("^[0-9\\.]{1,10}$") || l.matches("^[0-9\\.]{1,10}$")){
+        if(f.equals("")||l.equals("")||f.matches("^[0-9\\.]{1,10}$") || l.matches("^[0-9\\.]{1,10}$")){
             Window.alert("Enter valid First name and Last name");
             fname.selectAll();
             fname.setText("");

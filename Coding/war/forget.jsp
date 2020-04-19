@@ -40,7 +40,7 @@ long var= 0;
 
     Connection con = null;
         Class.forName("org.postgresql.Driver");
-       con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
+       con = DriverManager.getConnection("jdbc:postgresql://ec2-3-229-210-93.compute-1.amazonaws.com:5432/de7glaogm4jfro", "grofwmeazmakhx", "57a5efa8c7da81bd5191609ca480cfab6c6a511f866a2bf8f28a29636fad16cc");
         PreparedStatement n = con.prepareStatement("SELECT \"Staff\".\"Password\" FROM \"Staff\" WHERE \"Mobile_No\"=?");
         n.setLong(1, var);
         ResultSet rs = n.executeQuery();

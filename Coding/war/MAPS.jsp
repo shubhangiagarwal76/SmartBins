@@ -33,6 +33,11 @@
             height: 100%;
         }
         /* Optional: Makes the sample page fill the window. */
+        #heading{
+            position: center;
+            font-family: "Arial Black";
+            color: darkcyan;
+        }
         html, body {
             height: 100%;
             margin: 0;
@@ -43,41 +48,41 @@
 
 </head>
 <body>
-<h1>GOOGLE MAP</h1>
-<% String Pass = null;
-    long l;
-    long var= 0;
-    String temp="Dustbin";
-    List<Double> lat= new ArrayList<>();
-    List<Double> log= new ArrayList<>();
-    double lata[]=new double[100];
-    double loga[]=new double[100];
-    PrintWriter Out = response.getWriter();
-    try{
+<h1 id="heading">GOOGLE MAP</h1>
+<%--<% String Pass = null;--%>
+<%--    long l;--%>
+<%--    long var= 0;--%>
+<%--    String temp="Dustbin";--%>
+<%--    List<Double> lat= new ArrayList<>();--%>
+<%--    List<Double> log= new ArrayList<>();--%>
+<%--    double lata[]=new double[100];--%>
+<%--    double loga[]=new double[100];--%>
+<%--    PrintWriter Out = response.getWriter();--%>
+<%--    try{--%>
 
-        var  = Long.parseLong(request.getParameter("id"));
-        //Out.println(var);
-        Connection con = null;
-        Class.forName("org.postgresql.Driver");
-        con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "12345");
-        PreparedStatement n = con.prepareStatement("SELECT \"Status\", \"F_Name\", \"Last_Name\",\"Latitude_Coordinates\",\"Longitude_Coordinates\",\"Driver\".\"Driver_ID\" FROM \"Driver\", \"Dustbin\" WHERE \"Driver\".\"Driver_ID\"= \"Dustbin\".\"Driver_ID\" AND \"Staff_ID\"=?");
-        n.setLong(1, var);
-        ResultSet rs = n.executeQuery();
-        int i=0;
-        while (rs.next())
-        {
-            /*Pass = rs.getString("Password");
-            Out.println(rs.getString("F_Name"));
-            Out.println(rs.getDouble("Status"));
-            lat.add(rs.getDouble("Latitude_Coordinates"));
-            log.add(rs.getDouble("Longitude_Coordinates"));
-            lata[i]=rs.getDouble("Latitude_Coordinates");
-            loga[i]=rs.getDouble("Longitude_Coordinates");
-            i++;*/
-        }
-    } catch (SQLException ex) {
-        System.out.println(ex);
-    }%>
+<%--        var  = Long.parseLong(request.getParameter("id"));--%>
+<%--        //Out.println(var);--%>
+<%--        Connection con = null;--%>
+<%--        Class.forName("org.postgresql.Driver");--%>
+<%--        con = DriverManager.getConnection("jdbc:postgresql://ec2-3-229-210-93.compute-1.amazonaws.com:5432/de7glaogm4jfro\\\", \\\"grofwmeazmakhx\\\", \\\"57a5efa8c7da81bd5191609ca480cfab6c6a511f866a2bf8f28a29636fad16cc");--%>
+<%--        PreparedStatement n = con.prepareStatement("SELECT \"Status\", \"F_Name\", \"Last_Name\",\"Latitude_Coordinates\",\"Longitude_Coordinates\",\"Driver\".\"Driver_ID\" FROM \"Driver\", \"Dustbin\" WHERE \"Driver\".\"Driver_ID\"= \"Dustbin\".\"Driver_ID\" AND \"Staff_ID\"=?");--%>
+<%--        n.setLong(1, var);--%>
+<%--        ResultSet rs = n.executeQuery();--%>
+<%--        int i=0;--%>
+<%--        while (rs.next())--%>
+<%--        {--%>
+<%--            /*Pass = rs.getString("Password");--%>
+<%--            Out.println(rs.getString("F_Name"));--%>
+<%--            Out.println(rs.getDouble("Status"));--%>
+<%--            lat.add(rs.getDouble("Latitude_Coordinates"));--%>
+<%--            log.add(rs.getDouble("Longitude_Coordinates"));--%>
+<%--            lata[i]=rs.getDouble("Latitude_Coordinates");--%>
+<%--            loga[i]=rs.getDouble("Longitude_Coordinates");--%>
+<%--            i++;*/--%>
+<%--        }--%>
+<%--    } catch (SQLException ex) {--%>
+<%--        System.out.println(ex);--%>
+<%--    }%>--%>
 
 <div id="map"></div>
 <script>var map;
@@ -96,14 +101,19 @@ function initMap() {
             zoom: 18,
             mapTypeId: 'satellite'
         });
-    var marker = new google.maps.Marker({position: uluru1, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru2, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru3,icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru4, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru5, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru6, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru7, icon: pic, map: map});
-    var marker = new google.maps.Marker({position: uluru8, icon: pic, map: map});
+    var marker = new google.maps.Marker({position: uluru1, icon: pic, map: map,title:'Girls Hostel First Floor'});
+    var marker = new google.maps.Marker({position: uluru2, icon: pic, map: map,title:'Boys Hostel First Floor'});
+    var marker = new google.maps.Marker({position: uluru3,icon: pic, map: map,title:'Girls Hostel First Floor'});
+    var marker = new google.maps.Marker({position: uluru4, icon: pic, map: map,title:'Boys Hostel Ground Floor'});
+    var marker = new google.maps.Marker({position: uluru5, icon: pic, map: map,title:'Girls Hostel Ground Floor'});
+    var marker = new google.maps.Marker({position: uluru6, icon: pic, map: map,title:'Academic Block'});
+    var marker = new google.maps.Marker({position: uluru7, icon: pic, map: map,title:'Girls Hostel Ground Floor'});
+
+    map.addListener('center_changed',function () {
+        window.setTimeout(function () {
+            map.panTo(marker.getPosition());
+        },3000);
+    });
 }
 </script>
 
