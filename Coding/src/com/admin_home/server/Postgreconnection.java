@@ -168,13 +168,13 @@ public class Postgreconnection extends RemoteServiceServlet implements DBConnect
     }
 
     //ADD DRIVER
-    public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, Date DOB, String email, String gender,  long sid, String location)
+    public Driver insertInfo(String f_name, String l_name, long mobile_no, long aadhar, String DOB, String email, String gender,  long sid, String location)
     {
         Driver d1 = null;
 
         try {
             //java.util.Date to String
-            Date d = DOB;
+            Date d = new SimpleDateFormat("yyyy-mm-dd").parse(DOB);;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String strDate = dateFormat.format(d);
 

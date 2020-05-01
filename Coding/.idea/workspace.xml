@@ -27,81 +27,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="WORK COMPLETED DATABASE ON SERVER+ CSS + MAPS POPUP">
+    <list default="true" id="a6bdab87-a79b-4dfc-8f2e-2ad8e9ee66eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gwt_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gwt_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/META-INF/Smart_Bins.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/Admin_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/Admin_home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/LOGIN.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/LOGIN.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/MAPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/MAPS.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/war/MAPS.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/war/forget.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SmartBins@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SmartBins: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -141,14 +93,20 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project related/gwt-maps-api-3.9.0-build-16.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project related/apache-maven-3.6.3/bin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -709,6 +667,10 @@
       <workItem from="1578040106363" duration="315000" />
       <workItem from="1580703184946" duration="7050000" />
       <workItem from="1580739693486" duration="11830000" />
+      <workItem from="1587336655867" duration="10498000" />
+      <workItem from="1587369413103" duration="3462000" />
+      <workItem from="1587812872691" duration="188000" />
+      <workItem from="1588331608535" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="contact table updated">
       <created>1571138232417</created>
@@ -780,11 +742,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580657394131</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="WORK COMPLETED DATABASE ON SERVER+ CSS + MAPS POPUP&#10;SMART BINS V 1.0">
+      <created>1587315479339</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587315479339</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -833,72 +802,85 @@
     <MESSAGE value="HISTORY TOKEN ADDED" />
     <MESSAGE value="HISTORY TOKEN AND CLUSTER MAP" />
     <MESSAGE value="COMMIT BEFORE CSS PULL" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMMIT BEFORE CSS PULL" />
+    <MESSAGE value="WORK COMPLETED DATABASE ON SERVER+ CSS + MAPS POPUP&#10;SMART BINS V 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="WORK COMPLETED DATABASE ON SERVER+ CSS + MAPS POPUP&#10;SMART BINS V 1.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587312376767">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587339544020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587312376767" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1587314472588">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587339544020" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588336014308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587314472588" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1587312601668">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1588336014308" />
+    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1587381935261">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587312601668" />
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom" timestamp="1587313416111">
+    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.728@0.0.1366.728" timestamp="1587381935261" />
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1587315474690">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.0.center" timestamp="1587313416111">
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587315474690" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1587381952233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.0.left" timestamp="1587313416111">
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587381952233" />
+    <state width="1323" height="234" key="GridCell.Tab.0.bottom" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.0.right" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.0.center" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.1.bottom" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.0.left" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.1.center" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.0.right" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.1.left" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.1.bottom" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.1.right" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.1.center" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.2.bottom" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.1.left" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.2.center" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.1.right" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.2.left" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.2.bottom" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state width="1323" height="234" key="GridCell.Tab.2.right" timestamp="1587313416111">
+    <state width="1323" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.2.center" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587313416111" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1587312609179">
+    <state width="1323" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.2.left" timestamp="1587813070110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587312609179" />
+    <state width="1323" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state width="1323" height="234" key="GridCell.Tab.2.right" timestamp="1587813070110">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1587381983171">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587381983171" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1587315498865">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587315498865" />
   </component>
 </project>

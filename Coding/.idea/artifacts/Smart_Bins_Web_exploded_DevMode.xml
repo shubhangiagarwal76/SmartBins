@@ -6,6 +6,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Smart_Bins" />
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-maps-api-3.9.0-build-16.jar" />
+          <element id="dir-copy" path="$PROJECT_DIR$/../../Project related/apache-maven-3.6.3/bin" />
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-2.8.2/gwt-servlet.jar" />
