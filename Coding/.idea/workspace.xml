@@ -31,24 +31,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Smart_Bins_Web_exploded_DevMode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Bins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Bins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/META-INF/Smart_Bins.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$DriverInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$MyDateValueChangeHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$insertDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver$locationList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/AddDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/DBConnectionAsync.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/client/admin_dashboard$LocationList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart_Bins/com/admin_home/server/Postgreconnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/AddDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/client/DBConnectionAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/admin_home/server/Postgreconnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +91,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project related/apache-maven-3.6.3/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dependencies/postgresql-42.2.8.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -139,6 +124,18 @@
       <recent name="C:\Users\tiwar\Downloads\SmartBins-master\Coding\src\com\admin_home\server" />
       <recent name="C:\Users\HP\Desktop\SmartBins\Coding\.idea\artifacts" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="GWT Configuration.Admin_home">
     <configuration name="demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -770,7 +767,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -789,7 +788,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="contact table updated" />

@@ -12,9 +12,9 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/gwt-2.8.2/gwt-servlet.jar" />
           <element id="file-copy" path="$USER_HOME$/postgresql-42.2.6.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-maps-api-3.9.0-build-16.jar/gwt-maps-api-3.9.0-build-16.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/../../../../../Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/../../../../../Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre6.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/../../../../../Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre7.jar" />
+          <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jar" />
+          <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre6.jar" />
+          <element id="file-copy" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre7.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/juli-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/coyote-6.0.53.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../jar_files/catalina-6.0.53.jar" />
@@ -40,6 +40,8 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../gwt-2.8.2/validation-api-1.0.0.GA-sources.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../Project related/postgresql-42.2.8.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../Project related/gwt-maps-api-3.9.0-build-16.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/postgresql-42.2.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Dependencies/postgresql-42.2.8.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Smart_Bins/web/Web" />
