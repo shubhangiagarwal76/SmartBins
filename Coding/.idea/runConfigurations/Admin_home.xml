@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Admin_home" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+    <option name="RUN_PAGE" value="Admin_home.html" />
+    <option name="UPDATE_RESOURCES_ON_FRAME_DEACTIVATION" value="true" />
+    <option name="USE_SUPER_DEV_MODE" value="true" />
+    <option name="WORKING_DIRECTORY" value="" />
+    <module name="Smart_Bins" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
