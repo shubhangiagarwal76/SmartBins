@@ -10,13 +10,13 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>1111</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16764|16770|1
+      <Relations>sequence|table|16768|16770|4
+sequence|table|16764|16770|1
 sequence|table|16731|16735|1
 sequence|table|16745|16749|1
 sequence|table|16766|16770|2
 sequence|table|16786|16788|1
 sequence|table|16747|16749|2
-sequence|table|16768|16770|4
 </Relations>
     </database>
     <database id="3" parent="1" name="dvdrental">
