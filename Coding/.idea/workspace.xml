@@ -808,81 +808,43 @@
     <option name="LAST_COMMIT_MESSAGE" value="COMMIT BEFORE MERGING" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587339544020">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587339544020" />
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588336014308">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1588336014308" />
-    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1587381935261">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.728@0.0.1366.728" timestamp="1587381935261" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1587315474690">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587315474690" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1587381952233">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587381952233" />
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.0.center" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.0.left" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.0.right" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.1.bottom" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.1.center" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.1.left" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.1.right" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.2.bottom" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.2.center" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.2.left" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state width="1323" height="234" key="GridCell.Tab.2.right" timestamp="1587813070110">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587813070110" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1587381983171">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587381983171" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1587315498865">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587315498865" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" />
+    <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="285" y="0" key="CommitChangelistDialog2" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" />
+    <state x="463" y="105" key="FileChooserDialogImpl" />
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.0.bottom" />
+    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.0.center" />
+    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.0.left" />
+    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.0.right" />
+    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.1.bottom" />
+    <state width="1323" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.1.center" />
+    <state width="1323" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.1.left" />
+    <state width="1323" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.1.right" />
+    <state width="1323" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.2.bottom" />
+    <state width="1323" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.2.center" />
+    <state width="1323" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.2.left" />
+    <state width="1323" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" />
+    <state width="1323" height="234" key="GridCell.Tab.2.right" />
+    <state width="1323" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" />
+    <state x="163" y="0" key="SettingsEditor" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" />
   </component>
 </project>
