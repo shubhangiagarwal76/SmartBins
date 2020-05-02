@@ -30,8 +30,8 @@
 
 <% String Pass = null;
 long var= 0;
-    try{
     PrintWriter Out = response.getWriter();
+    try{
 
     var  = Long.parseLong(request.getParameter("number"));
 
@@ -40,7 +40,7 @@ long var= 0;
 
     Connection con = null;
         Class.forName("org.postgresql.Driver");
-        con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SmartBins", "postgres", "behenchod101");
+       con = DriverManager.getConnection("jdbc:postgresql://ec2-3-229-210-93.compute-1.amazonaws.com:5432/de7glaogm4jfro", "grofwmeazmakhx", "57a5efa8c7da81bd5191609ca480cfab6c6a511f866a2bf8f28a29636fad16cc");
         PreparedStatement n = con.prepareStatement("SELECT \"Staff\".\"Password\" FROM \"Staff\" WHERE \"Mobile_No\"=?");
         n.setLong(1, var);
         ResultSet rs = n.executeQuery();
@@ -48,7 +48,7 @@ long var= 0;
         {
              Pass = rs.getString("Password");
 
-           Out.println(Pass);
+
         }
     } catch (SQLException ex) {
         System.out.println("Enter correct Number");
@@ -64,19 +64,19 @@ long var= 0;
             .build();
 
     Response response = client.newCall(request).execute();*/
-    String authkey = "1f5491a913msh456e6e3668c4fb8p1e9912jsn9302562091f8";
-    String senderId = "ABCDEF";
+    String authkey = "18sUVSjxhSo-ok70P2kfLE9FIkGSax0ISKq1KBR2zr";
+    String senderId = "TXTLCL";
     String route="4";
     URLConnection myURLConnection=null;
     URL myURL=null;
     BufferedReader reader=null;
-    String encoded_message=URLEncoder.encode(Pass);
-    String mainUrl="https://gurubrahma-smsly-sms-to-india-v1.p.rapidapi.com?";
+    //String encoded_message=URLEncoder.encode(Pass);
+    String mainUrl="https://api.textlocal.in/send/?";
     StringBuilder sbPostData= new StringBuilder(mainUrl);
-    sbPostData.append("&rapidapi-key="+authkey);
-    sbPostData.append("&mobiles="+var);
-    sbPostData.append("&message="+encoded_message);
-    sbPostData.append("&route="+route);
+    sbPostData.append("apikey="+authkey);
+    sbPostData.append("&numbers="+var);
+    sbPostData.append("&message="+Pass);
+    //sbPostData.append("&route="+route);
     sbPostData.append("&sender="+senderId);
 
     mainUrl = sbPostData.toString();
@@ -87,8 +87,10 @@ long var= 0;
         myURLConnection = myURL.openConnection();
         myURLConnection.connect();
         reader= new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
-        String success="Your message sent sucessfully";
-        out.println(success);
+        String success="Your password sent successfully on "+var;
+        Out.println(success);
+        Out.println("NOTE: PLEASE MAKE SURE YOUR NUMBER IS NOT ON DND, OTHERWISE MESSAGE WILL NOT BE RECEIVED");
+
 //finally close connection
         reader.close();
     }

@@ -22,7 +22,10 @@
         <url-pattern>/Admin_home/Admin_homeService</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>Login.html</welcome-file>
         <welcome-file>Admin_home.html</welcome-file>
+        <welcome-file>LOGIN.html</welcome-file>
+        <welcome-file>forget.jsp</welcome-file>
+        <welcome-file>MAPS.html</welcome-file>
+        <welcome-file>MAPS.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

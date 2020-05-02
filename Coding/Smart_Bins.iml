@@ -5,7 +5,7 @@
       <configuration>
         <setting name="compilerMaxHeapSize" value="1024" />
         <setting name="gwtScriptOutputStyle" value="DETAILED" />
-        <setting name="gwtSdkUrl" value="file://$USER_HOME$/Downloads/gwt-2.8.2/gwt-2.8.2" />
+        <setting name="gwtSdkUrl" value="file://$MODULE_DIR$/Dependencies/gwt-2.8.2/gwt-2.8.2" />
         <setting name="webFacet" value="Web" />
       </configuration>
     </facet>
@@ -28,65 +28,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.0" level="application_server_libraries" />
-    <orderEntry type="library" name="gwt-user" level="project" />
-    <orderEntry type="module-library">
+    <orderEntry type="library" exported="" name="gwt-user" level="project" />
+    <orderEntry type="library" exported="" name="gwt-user (3)" level="project" />
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/postgresql-42.2.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/Dependencies/postgresql-42.2.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/gwt-maps-api-3.9.0-build-16.jar" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/gwt-maps-api-3.9.0-build-16.jar" />
-        </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/gwt-maps-api-3.9.0-build-16.jar" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/gwt-maps-api-3.9.0-build-16.jar" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre6.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.2.5.jre7.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/jar_files" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/Downloads/jar_files" recursive="false" />
       </library>
     </orderEntry>
   </component>
