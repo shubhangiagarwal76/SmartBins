@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GWT Driver Module " type="GWT.ConfigurationType" factoryName="GWT Configuration">
+    <option name="RUN_PAGE" value="MySampleApplication.html" />
+    <option name="USE_SUPER_DEV_MODE" value="true" />
+    <option name="WORKING_DIRECTORY" value="" />
+    <module name="DRIVER's Coding" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
